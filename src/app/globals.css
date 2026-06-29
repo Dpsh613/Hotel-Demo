@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-surface-alternate: #f0ede8;
+  --color-text-primary: #111111;
+}
+
+@theme inline {
+  /* Colors */
+  --color-surface-alt: var(--color-surface-alternate);
+  /* Fonts */
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .container-content {
+    @apply w-[92%] max-w-[1600px] mx-auto;
+  }
+}

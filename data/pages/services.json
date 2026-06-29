@@ -1,0 +1,81 @@
+{
+  "services": [
+    {
+      "slug": "meeting-spaces",
+      "status": "published",
+      "nav_label": "Meeting Spaces",
+      "page_title": "Meeting Spaces",
+      "card_title": "Meeting Spaces",
+      "card_tagline": "Choose from our 3 exclusive meeting rooms - where functionality meets inspiration and focus flows naturally.",
+      "card_cta_text": "Step inside our spaces",
+      "card_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782655791/meeting-spaces_h141vw.jpg",
+      "card_image_alt": "inspiring meeting rooms for your team.",
+      "meta_title": "Meeting Spaces | The Golden Crown",
+      "meta_description": "Exclusive meeting rooms for your team.",
+      "page_subtitle": "At The Golden Crown, our meeting rooms are designed to inspire productivity and collaboration, equipped with state-of-the-art technology and flexible layouts to suit your needs.",
+      "quick_nav_items": [
+        { "label": "THE SPACES", "id": "the-spaces" },
+        { "label": "ONE PRICE CONCEPT", "id": "one-price-concept" },
+        { "label": "TECHNOLOGIES", "id": "technologies" },
+        { "label": "AMENITIES", "id": "amenities" }
+      ],
+      "sort_order": 1
+    },
+    {
+      "slug": "business-events",
+      "status": "published",
+      "nav_label": "Business Events",
+      "page_title": "Business Events",
+      "card_title": "Business Events",
+      "card_tagline": "Host your corporate event in a private, nature-infused setting designed to inspire and impress.",
+      "card_cta_text": "Discover what's possible",
+      "card_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782655791/business-events_ctj3xa.jpg",
+      "card_image_alt": "Professional business events at The Golden Crown",
+      "meta_title": "Business Events | The Golden Crown",
+      "meta_description": "Host your corporate events.",
+      "hero_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782657349/hero-desktop_qauwbd.jpg",
+      "sort_order": 2
+    },
+    {
+      "slug": "stay-the-night",
+      "status": "published",
+      "nav_label": "Stay the Night",
+      "page_title": "Stay the Night",
+      "card_title": "Stay the Night",
+      "card_tagline": "Relax after a long day in one of our 8 versatile rooms – crafted for comfort, rest and a sense of ease.",
+      "card_cta_text": "Experience the stay",
+      "card_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782655792/stay-the-night_tzweor.jpg",
+      "card_image_alt": "Comfortable overnight stay at The Golden Crown",
+      "meta_title": "Stay the Night | The Golden Crown",
+      "meta_description": "Relax in our comfortable rooms.",
+      "page_subtitle": "At The Golden Crown, every stay is designed for comfort, productivity and relaxation. Whether you are here for a short business trip or an extended stay, our thoughtfully designed rooms provide everything you need to feel at home.",
+      "quick_nav_items": [
+        { "label": "OUR ROOMS", "id": "our-rooms" },
+        { "label": "ONE PRICE CONCEPT", "id": "one-price-concept" },
+        { "label": "WHAT'S INCLUDED", "id": "whats-included" }
+      ]
+    }
+  ],
+  "one_price_concepts": [
+    {
+      "service_slug": "meeting-spaces",
+      "headline": "One Price Concept",
+      "body": "We keep it simple: rentals include complimentary access to coffee, tea, sparkling and still water. Catering options are available for your convenience and can be tailored to suit your needs, with any catering services billed separately.",
+      "inclusions_heading": "Tailored to Your Business Needs",
+      "inclusions_body": "At The Golden Crown, we offer complete flexibility to create the ideal environment for you. Our spaces can be arranged in any layout to suit your needs, with options for breakout rooms and additional areas for smaller group sessions or private conversations.",
+      "catering_note": null,
+      "supporting_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782657648/business-needs_hpx6xu.jpg",
+      "supporting_image_alt": "Tailored to Your Business Needs"
+    },
+    {
+      "service_slug": "stay-the-night",
+      "headline": "One-Price Concept",
+      "body": "Our approach simplifies your experience: enjoy your time with us without worrying about hidden fees.",
+      "inclusions_heading": null,
+      "inclusions_body": "Everything you need to work, relax and recharge is available to you, all with one transparent price (see section What's Included).",
+      "catering_note": "Catering options are available for your convenience and can be tailored to suit your needs, with any catering services billed separately.",
+      "show_tailored_section": false,
+      "supporting_image_ref": null
+    }
+  ]
+}

@@ -1,8 +1,14 @@
 import { cache } from "react"; // cache so it wont load on every request.
 import { promises as fs } from "fs"; // file system which is built in node - it can read/create/write and delete file.
 import path from "path"; // built in which reads/creates path thats better than "data/components/hero.json" as it could break.
-import { HeroContent } from "@/types"; // imported interface/ shape of object.
-const DATA_DIR = path.join(process.cwd(), "data"); // simply means data directory of the current working directory (which is in this case is the golden crown) lives in data folder.
+import {
+  HomePageData,
+  HeroContent,
+  OnePriceConcept,
+  ServiceData,
+} from "@/types"; // imported interface/ shape of object.
+const DATA_DIR = path.join(process.cwd(), "data");
+// simply means data directory of the current working directory (which is in this case is the golden crown) lives in data folder.
 
 // ---------------------readjson async function explanation -------------------
 // readJson<T> = T means placeholder type, (generic)
@@ -29,6 +35,46 @@ async function readJson<T>(filePath: string, fallback: T): Promise<T> {
     return fallback;
   }
 }
+
+// Page loaders
+// 1. about section
+
+export const getHomePageData = cache(async (): Promise<HomePageData> => {
+  return readJson<HomePageData>(
+    path.join(DATA_DIR, "pages", "home.json"),
+    {} as HomePageData,
+  );
+});
+
+// 2. services
+
+export const getAllServices = cache(
+  async (): Promise<{ services: ServiceData[] }> => {
+    return readJson<{ services: ServiceData[] }>(
+      path.join(DATA_DIR, "pages", "services.json"),
+      { services: [] },
+    );
+  },
+);
+
+export const getServiceBySlug = cache(
+  async (slug: string): Promise<ServiceData | null> => {
+    const data = await getAllServices();
+    if (!data || !data.services) return null;
+    return data.services.find((s) => s.slug === slug) || null;
+  },
+);
+
+export const getOnePriceConcept = cache(
+  async (slug: string): Promise<OnePriceConcept | null> => {
+    const data = await readJson<{ one_price_concepts?: OnePriceConcept[] }>(
+      path.join(DATA_DIR, "pages", "services.json"),
+      { one_price_concepts: [] },
+    );
+    if (!data || !data.one_price_concepts) return null;
+    return data.one_price_concepts.find((c) => c.service_slug === slug) || null;
+  },
+);
 
 // Components loaders
 // HeroSlideShow Component
