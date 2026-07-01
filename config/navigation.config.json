@@ -1,0 +1,59 @@
+{
+  "main": [
+    {
+      "label": "Home",
+      "path": "/",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Meeting Spaces",
+      "path": "/meeting-spaces",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Business Events",
+      "path": "/business-events",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Stay the Night",
+      "path": "/stay-the-night",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Our Story",
+      "path": "/our-story",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Practical Info",
+      "path": "/practical-info",
+      "show": true,
+      "open_in_new_tab": false
+    },
+    {
+      "label": "Contact",
+      "path": "/contact",
+      "show": true,
+      "open_in_new_tab": false
+    }
+  ],
+  "mobile_navigation": {
+    "show_contact_in_menu": true,
+    "show_social_in_menu": true,
+    "show_hours_in_menu": false,
+    "menu_trigger_label": "Menu"
+  },
+  "footer_navigation": {
+    "duplicate_primary": true,
+    "show_legal_links": true
+  },
+  "sticky_header": true,
+  "header_transparency": "on-hero-only",
+  "scroll_behavior": "smooth"
+}

@@ -1,0 +1,14 @@
+{
+  "banners": [
+    {
+      "slug": "spring-sale-2026",
+      "text": "Book your summer retreat before June and get 15% off all meeting spaces.",
+      "cta_text": "View Spaces",
+      "cta_url": "/meeting-spaces",
+      "type": "promotional",
+      "position": "top",
+      "dismissible": true,
+      "show": true
+    }
+  ]
+}

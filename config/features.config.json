@@ -1,0 +1,11 @@
+{
+  "testimonials_section": false,
+  "faq_section": false,
+  "newsletter_signup": true,
+  "pre_header_bar": false,
+  "announcement_banner": false,
+  "quick_navigation": true,
+  "gallery_lightbox": true,
+  "pricing_visible": true,
+  "hero_slideshow": true
+}

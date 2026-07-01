@@ -1,0 +1,184 @@
+{
+  "feature_groups": [
+    {
+      "slug": "why-choose",
+      "heading": "Why choose The Golden Crown",
+      "display_layout": "icon-grid",
+      "items": [
+        {
+          "slug": "freedom",
+          "icon_ref": "",
+          "label": "Freedom to Tailor Your Stay",
+          "body": "From extended business trips to corporate retreats and seminars, The Golden Crown offers the flexibility to match your needs. Enjoy the freedom to work, stay and unwind on your terms – in an exclusive, personalised setting."
+        },
+        {
+          "slug": "eco-friendly",
+          "icon_ref": "",
+          "label": "Eco-Friendly and Sustainable",
+          "body": "Our thoughtfully rebuilt grove reflects a deep commitment to the environment, using sustainable materials and technologies to create a space that respects nature while offering modern comfort."
+        },
+        {
+          "slug": "convenient",
+          "icon_ref": "",
+          "label": "Convenient and Connected",
+          "body": "Located in Demoville, The Golden Crown is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
+        },
+        {
+          "slug": "one-price",
+          "icon_ref": "",
+          "label": "One-Price Concept",
+          "body": "We keep it simple: our One-Price Concept ensures simple, transparent pricing with no hidden costs. Inclusions are clearly detailed per service, so you always know what to expect."
+        },
+        {
+          "slug": "nature",
+          "icon_ref": "",
+          "label": "Nature-Infused Experience",
+          "body": "Step away from the noise! The Golden Crown offers an intimate, peaceful setting with open field views and the calming presence of animals – a pony, a dog, cats, chickens and rabbits — roaming freely around the property. Whether you are taking a break, strolling the grounds or unwinding after a long day, their presence adds a unique and relaxing touch to your stay."
+        },
+        {
+          "slug": "professionals",
+          "icon_ref": "",
+          "label": "Equipped for Professionals",
+          "body": "The Golden Crown is designed with professionals in mind. From high-end meeting spaces to private rooms and wellness facilities (fitness and sauna), every detail supports productivity, focus, collaboration and comfort – whether you are working, hosting an event, collaborating with a team or simply recharging after a busy day."
+        },
+        {
+          "slug": "multilingual",
+          "icon_ref": "",
+          "label": "Multilingual Team",
+          "body": "To ensure smooth communication and a personalised experience, our team speaks English, Dutch, French, German and Romanian. No matter your language, we are here to help."
+        }
+      ]
+    },
+    {
+      "slug": "technologies",
+      "heading": "Technologies",
+      "display_layout": "icon-grid",
+      "note": "We intentionally do not support video conferencing. The Golden Crown is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
+      "items": [
+        {
+          "slug": "smart-tv",
+          "icon_ref": "Monitor",
+          "label": "Screen Smart TV",
+          "descriptor": "crisp visuals"
+        },
+        {
+          "slug": "sound",
+          "icon_ref": "Headphones",
+          "label": "High-Quality Sound",
+          "descriptor": "immersive audio"
+        },
+        {
+          "slug": "clickshare",
+          "icon_ref": "Cast",
+          "label": "Barco ClickShare",
+          "descriptor": "wireless presentations"
+        },
+        {
+          "slug": "flipchart",
+          "icon_ref": "LayoutTemplate",
+          "label": "Digital Flipchart",
+          "descriptor": "interactive whiteboarding"
+        },
+        {
+          "slug": "wifi",
+          "icon_ref": "Wifi",
+          "label": "Super-Fast Wi-Fi",
+          "descriptor": "seamless coverage"
+        },
+        {
+          "slug": "outlets",
+          "icon_ref": "PlugZap",
+          "label": "Power Outlets",
+          "descriptor": "stay connected"
+        }
+      ]
+    },
+    {
+      "slug": "amenities",
+      "heading": "Amenities",
+      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at The Golden Crown.",
+      "display_layout": "photo-card-grid",
+      "items": [
+        {
+          "slug": "coffee-corner",
+          "icon_ref": "Coffee",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719700/coffee-corner_fjrg5d.jpg",
+          "label": "Coffee Corner",
+          "body": "Enjoy a continuously stocked coffee corner with complimentary beverages to keep you refreshed throughout the day."
+        },
+        {
+          "slug": "natural-daylight",
+          "icon_ref": "Sun",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719699/natural-daylight_bqduzx.jpg",
+          "label": "Natural Daylight",
+          "body": "Large windows flood the rooms with daylight, creating a bright, energising and productive work environment."
+        },
+        {
+          "slug": "inspiring-views",
+          "icon_ref": "Eye",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719698/inspiring-views_hlaptz.jpg",
+          "label": "Inspiring Views",
+          "body": "Admire the serene views of the surrounding fields – a peaceful backdrop that fosters focus, creativity and calm."
+        },
+        {
+          "slug": "outdoor-terrace",
+          "icon_ref": "Trees",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719710/outdoor-terrace_d8alsn.jpg",
+          "label": "Outdoor Terrace",
+          "body": "Step outside for a breath of fresh air. Ideal for informal chats, coffee breaks or simply enjoying nature between sessions."
+        },
+        {
+          "slug": "summer-house",
+          "icon_ref": "Home",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719712/summer-house_vivncy.jpg",
+          "label": "The Summer House",
+          "body": "A cozy, detached space ideal for breakout sessions, private calls or quiet focus – filled with natural light and views of the grounds."
+        }
+      ]
+    },
+    {
+      "slug": "room-inclusions",
+      "heading": "What's Included",
+      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at The Golden Crown features:",
+      "display_layout": "inclusion-grid",
+      "items": [
+        {
+          "slug": "breakfast",
+          "icon_ref": "Utensils",
+          "label": "Breakfast Crafted for You",
+          "body": "Start your day the right way."
+        },
+        {
+          "slug": "drinks",
+          "icon_ref": "Coffee",
+          "label": "Drinks Your Way",
+          "body": "Help yourself – drinks are complimentary."
+        },
+        {
+          "slug": "bathroom",
+          "icon_ref": "Bath",
+          "label": "Private Bathroom",
+          "body": "Walk-in shower (and a bathtub in Executive Suite 2)."
+        },
+        {
+          "slug": "amenities",
+          "icon_ref": "Tv",
+          "label": "Modern Amenities",
+          "body": "Smart TV with easy casting."
+        },
+        {
+          "slug": "wifi",
+          "icon_ref": "Wifi",
+          "label": "Free High-Speed Wi-Fi",
+          "body": "Stay connected, indoors and outdoors."
+        },
+        {
+          "slug": "facilities",
+          "icon_ref": "Building2",
+          "label": "Access to all Facilities",
+          "body": "Terraces, Spa (fitness & sauna) and Summer House."
+        }
+      ]
+    }
+  ]
+}

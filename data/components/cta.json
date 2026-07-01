@@ -1,0 +1,15 @@
+{
+  "ctas": [
+    {
+      "slug": "primary-contact",
+      "heading": "Ready to learn more?",
+      "body": "Contact us for reservations or additional information. We will work with you to create a truly memorable experience.",
+      "button_text": "GET IN TOUCH",
+      "button_url": "/contact",
+      "section_background": "default",
+      "button_style": "primary",
+      "show_divider_above": true,
+      "open_in_new_tab": false
+    }
+  ]
+}

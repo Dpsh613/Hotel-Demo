@@ -1,0 +1,41 @@
+{
+  "section_heading": "OUR VALUES",
+  "section_subheading": "What drive us at our core",
+  "values": [
+    {
+      "slug": "freedom",
+      "label": "Freedom",
+      "description": "Empowering you to shape your time with us.",
+      "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719404/freedom_fkspij.jpg",
+      "sort_order": 1
+    },
+    {
+      "slug": "sustainability",
+      "label": "Sustainability",
+      "description": "Building a greener future with eco-conscious choices.",
+      "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719404/sustainability_xq2jrr.jpg",
+      "sort_order": 2
+    },
+    {
+      "slug": "exclusivity",
+      "label": "Exclusivity",
+      "description": "Creating tailored, private experiences.",
+      "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719403/exclusivity_mbh5j1.jpg",
+      "sort_order": 3
+    },
+    {
+      "slug": "comfort",
+      "label": "Comfort",
+      "description": "Balancing modern luxury with a homely atmosphere.",
+      "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719408/comfort_xlkqgm.jpg",
+      "sort_order": 4
+    },
+    {
+      "slug": "inspiration",
+      "label": "Inspiration",
+      "description": "Encouraging creativity and relaxation through our grove-inspired design.",
+      "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719403/inspiration_zujyxo.jpg",
+      "sort_order": 5
+    }
+  ]
+}

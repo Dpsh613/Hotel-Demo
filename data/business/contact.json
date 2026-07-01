@@ -1,0 +1,33 @@
+{
+  "phone": "+1 555 123 4567",
+  "phone_uri": "tel:+15551234567",
+  "email": "info@example.com",
+  "address_line_1": "123 Demo Street",
+  "city": "Demoville",
+  "postcode": "9999",
+  "country": "Demoland",
+  "country_code": "DL",
+  "maps_link": "https://maps.app.goo.gl/dummy",
+  "proximity_points": [
+    {
+      "label": "Brussels Airport",
+      "distance_km": 25,
+      "distance_text": "25km"
+    },
+    {
+      "label": "Brussels City Center",
+      "distance_km": 20,
+      "distance_text": "20km"
+    },
+    {
+      "label": "Antwerp",
+      "distance_km": 30,
+      "distance_text": "30km"
+    },
+    {
+      "label": "Mechelen",
+      "distance_km": 20,
+      "distance_text": "20km"
+    }
+  ]
+}

@@ -1,24 +1,30 @@
 import { cache } from "react"; // cache so it wont load on every request.
-import { promises as fs } from "fs"; // file system which is built in node - it can read/create/write and delete file.
+import { promises as fs, read } from "fs"; // file system which is built in node - it can read/create/write and delete file.
 import path from "path"; // built in which reads/creates path thats better than "data/components/hero.json" as it could break.
 import {
+  BusinessIdentity,
+  BusinessContact,
+  BusinessHours,
+  SocialPlatform,
+  TeamMember,
   HomePageData,
   HeroContent,
+  FeatureGroup,
   OnePriceConcept,
   ServiceData,
+  ValuesData,
+  SiteConfig,
+  FeaturesConfig,
+  NavigationConfig,
+  NewsletterData,
+  CTABlock,
+  Banner,
+  CookiesData,
 } from "@/types"; // imported interface/ shape of object.
+
 const DATA_DIR = path.join(process.cwd(), "data");
-// simply means data directory of the current working directory (which is in this case is the golden crown) lives in data folder.
-
-// ---------------------readjson async function explanation -------------------
-// readJson<T> = T means placeholder type, (generic)
-// for example in herocontent , <T> becomes <{heroes:HeroContent[]}>
-
-// filePath:string -- what is the file path for herocontent ?? -- data/components/hero.json.. so its a string.
-
-// fallback: T , backup data, if files break it will return fallback.
-
-// return type is = Promise<T> - meaning I will return type T bcs file reading is async.
+const CONFIG_DIR = path.join(process.cwd(), "config");
+// simply means data directory of the current workFeaturesConfigll return type T bcs file reading is async.
 
 // try block -- attempt to read the file path and store the content then
 // return json = then convert the text into object- In the form of T Type.
@@ -35,6 +41,47 @@ async function readJson<T>(filePath: string, fallback: T): Promise<T> {
     return fallback;
   }
 }
+
+// Business loaders
+
+export const getBusinessIdentity = cache(
+  async (): Promise<BusinessIdentity> => {
+    return readJson<BusinessIdentity>(
+      path.join(DATA_DIR, "business", "identity.json"),
+      {} as BusinessIdentity,
+    );
+  },
+);
+
+export const getBusinessContact = cache(async (): Promise<BusinessContact> => {
+  return readJson<BusinessContact>(
+    path.join(DATA_DIR, "business", "contact.json"),
+    {} as BusinessContact,
+  );
+});
+
+export const getBusinessHours = cache(async (): Promise<BusinessHours> => {
+  return readJson<BusinessHours>(
+    path.join(DATA_DIR, "business", "hours.json"),
+    {} as BusinessHours,
+  );
+});
+
+export const getSocialPlatforms = cache(
+  async (): Promise<{ platforms: SocialPlatform[] }> => {
+    return readJson<{ platforms: SocialPlatform[] }>(
+      path.join(DATA_DIR, "business", "social.json"),
+      { platforms: [] },
+    );
+  },
+);
+
+export const getTeam = cache(async (): Promise<{ members: TeamMember[] }> => {
+  return readJson<{ members: TeamMember[] }>(
+    path.join(DATA_DIR, "business", "team.json"),
+    { members: [] },
+  );
+});
 
 // Page loaders
 // 1. about section
@@ -93,10 +140,104 @@ export const getHeroBySlug = cache(
       path.join(DATA_DIR, "components", "hero.json"),
       { heroes: [] },
     );
-    console.log(data);
-    console.log(data.heroes);
-    console.log(Array.isArray(data.heroes));
     if (!data || !data.heroes) return null;
     return data.heroes.find((h) => h.slug === slug) || null;
+  },
+);
+
+export const getCTABySlug = cache(
+  async (slug: string): Promise<CTABlock | null> => {
+    const data = await readJson<{ ctas: CTABlock[] }>(
+      path.join(DATA_DIR, "components", "cta.json"),
+      { ctas: [] },
+    );
+    if (!data || !data.ctas) return null;
+    return data.ctas.find((c) => c.slug === slug) || null;
+  },
+);
+
+// feature component
+export const getFeatureGroup = cache(
+  async (slug: string): Promise<FeatureGroup | null> => {
+    const data = await readJson<{ feature_groups: FeatureGroup[] }>(
+      path.join(DATA_DIR, "components", "features.json"),
+      { feature_groups: [] },
+    );
+    if (!data || !data.feature_groups) return null;
+    return data.feature_groups.find((f) => f.slug === slug) || null;
+  },
+);
+
+// values component
+
+export const getValuesData = cache(async (): Promise<ValuesData> => {
+  return readJson<ValuesData>(
+    path.join(DATA_DIR, "components", "values.json"),
+    {} as ValuesData,
+  );
+});
+
+export const getNewsletterData = cache(async (): Promise<NewsletterData> => {
+  return readJson<NewsletterData>(
+    path.join(DATA_DIR, "components", "newsletter.json"),
+    {} as NewsletterData,
+  );
+});
+
+export const getActiveBanners = cache(async (): Promise<Banner[]> => {
+  const data = await readJson<{ banners: Banner[] }>(
+    path.join(DATA_DIR, "components", "banners.json"),
+    { banners: [] },
+  );
+  if (!data || !data.banners) return [];
+
+  const now = new Date();
+
+  return data.banners.filter((b) => {
+    if (!b.show) return false;
+
+    if (b.start_date) {
+      const start = new Date(b.start_date);
+      if (start > now) return false;
+    }
+
+    if (b.end_date) {
+      const end = new Date(b.end_date);
+      if (end < now) return false;
+    }
+
+    return true;
+  });
+});
+
+export const getCookiesData = cache(async (): Promise<CookiesData> => {
+  return readJson<CookiesData>(
+    path.join(DATA_DIR, "legal", "cookies.json"),
+    {} as CookiesData,
+  );
+});
+
+// Config loaders
+
+export const getSiteConfig = cache(async (): Promise<SiteConfig> => {
+  return readJson<SiteConfig>(
+    path.join(CONFIG_DIR, "site.config.json"),
+    {} as SiteConfig,
+  );
+});
+
+export const getFeaturesConfig = cache(async (): Promise<FeaturesConfig> => {
+  return readJson<FeaturesConfig>(
+    path.join(CONFIG_DIR, "features.config.json"),
+    {} as FeaturesConfig,
+  );
+});
+
+export const getNavigationConfig = cache(
+  async (): Promise<NavigationConfig> => {
+    return readJson<NavigationConfig>(
+      path.join(CONFIG_DIR, "navigation.config.json"),
+      {} as NavigationConfig,
+    );
   },
 );

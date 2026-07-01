@@ -1,0 +1,28 @@
+{
+  "platforms": [
+    {
+      "platform": "facebook",
+      "display_name": "Facebook",
+      "url": "https://facebook.com",
+      "show_in_header": true,
+      "show_in_footer": true,
+      "show_in_contact": true
+    },
+    {
+      "platform": "instagram",
+      "display_name": "Instagram",
+      "url": "https://instagram.com",
+      "show_in_header": true,
+      "show_in_footer": true,
+      "show_in_contact": true
+    },
+    {
+      "platform": "linkedin",
+      "display_name": "LinkedIn",
+      "url": "https://linkedin.com",
+      "show_in_header": true,
+      "show_in_footer": true,
+      "show_in_contact": true
+    }
+  ]
+}

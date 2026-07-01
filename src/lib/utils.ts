@@ -6,3 +6,22 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+// what does this function do...
+
+export function isExternalUrl(url: string): boolean {
+  if (!url) return false;
+  return (
+    url.startsWith("http://") ||
+    url.startsWith("https://") ||
+    url.startsWith("mailto:") ||
+    url.startsWith("tel:")
+  );
+}
+
+export function getLinkProps(url: string): { target?: string; rel?: string } {
+  if (isExternalUrl(url)) {
+    return { target: "_blank", rel: "noopener noreferrer" };
+  }
+  return {};
+}

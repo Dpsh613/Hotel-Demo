@@ -1,0 +1,20 @@
+{
+  "name": "The Golden Crown",
+  "url": "https://groveside.be",
+  "locale": "en-BE",
+  "currency": "EUR",
+  "date_format": "DD/MM/YYYY",
+  "time_format": "24h",
+  "timezone": "Europe/Brussels",
+  "active_theme": "default",
+  "enable_dark_mode": false,
+  "twitter_card_type": "summary_large_image",
+  "analytics_provider": "none",
+  "cookie_consent_required": true,
+  "credit_name": "",
+  "credit_url": "",
+  "not_found": {
+    "heading": "Page not found",
+    "body": "The page you're looking for doesn't exist or has been moved."
+  }
+}
