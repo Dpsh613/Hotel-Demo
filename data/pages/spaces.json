@@ -1,0 +1,79 @@
+{
+  "spaces": [
+    {
+      "slug": "bowies-boardroom",
+      "parent_service_slug": "meeting-spaces",
+      "name": "Bowie's Boardroom",
+      "capacity_min": 4,
+      "capacity_max": 12,
+      "capacity_label": "4 – 12 GUESTS",
+      "area_sqm": 40,
+      "area_display": "40m²",
+      "layout_styles": ["Boardroom style"],
+      "special_features": [],
+      "description_long": "A cozy yet fully equipped boardroom ideal for strategic discussions, leadership meetings or smaller team collaborations. Warm, professional and private – perfect for focused work.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969479/gallery-01_xj00oy.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
+      "sort_order": 1,
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969479/gallery-01_xj00oy.jpg",
+          "alt_text": "Bowie's Boardroom"
+        },
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969494/gallery-02_sphszm.jpg",
+          "alt_text": "Bowie's Boardroom"
+        }
+      ]
+    },
+    {
+      "slug": "amazons-meadow",
+      "parent_service_slug": "meeting-spaces",
+      "name": "Amazons' Meadow",
+      "capacity_min": 13,
+      "capacity_max": 40,
+      "capacity_label": "13 – 40 GUESTS",
+      "area_sqm": 70,
+      "area_display": "70m²",
+      "layout_styles": [
+        "Fully adaptable for theater-style, U-shape, boardroom or collaborative sessions"
+      ],
+      "special_features": ["Private terrace"],
+      "description_long": "A spacious, flexible venue designed for presentations, workshops, team-building activities or larger group sessions. Bright, open and directly connected to the outdoor terrace – it adapts easily to your preferred layout.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969565/gallery-01_mgrzxq.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
+      "sort_order": 2,
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969565/gallery-01_mgrzxq.jpg",
+          "alt_text": "Amazons' Meadow"
+        }
+      ]
+    },
+    {
+      "slug": "tokyos-lounge",
+      "parent_service_slug": "meeting-spaces",
+      "name": "Tokyo's Lounge",
+      "capacity_min": null,
+      "capacity_max": 20,
+      "capacity_label": "UP TO 20 GUESTS",
+      "area_sqm": 45,
+      "area_display": "45m²",
+      "layout_styles": ["Flexible for formal or informal events"],
+      "special_features": ["Private terrace", "Fireplace"],
+      "description_long": "A stylish, relaxed meeting space that blends comfort with function. Ideal for informal strategy sessions, creative brainstorms, etc. With flexible setup and direct terrace access, it encourages open thinking and meaningful dialogue in a more laid-back atmosphere.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969678/gallery-01_ab0qbw.jpg",
+      "gallery_trigger_label": "OPEN GALLERY",
+      "status": "published",
+      "sort_order": 3,
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782969678/gallery-01_ab0qbw.jpg",
+          "alt_text": "Tokyo's Lounge"
+        }
+      ]
+    }
+  ]
+}

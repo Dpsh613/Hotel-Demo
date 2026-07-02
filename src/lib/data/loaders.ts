@@ -11,6 +11,8 @@ import {
   HeroContent,
   FeatureGroup,
   OnePriceConcept,
+  SpaceData,
+  RoomData,
   ServiceData,
   ValuesData,
   SiteConfig,
@@ -120,6 +122,40 @@ export const getOnePriceConcept = cache(
     );
     if (!data || !data.one_price_concepts) return null;
     return data.one_price_concepts.find((c) => c.service_slug === slug) || null;
+  },
+);
+
+// meeting-spaces-page
+export const getAllSpaces = cache(
+  async (): Promise<{ spaces: SpaceData[] }> => {
+    return readJson<{ spaces: SpaceData[] }>(
+      path.join(DATA_DIR, "pages", "spaces.json"),
+      { spaces: [] },
+    );
+  },
+);
+
+export const getSpacesByServiceSlug = cache(
+  async (slug: string): Promise<SpaceData[]> => {
+    const data = await getAllSpaces();
+    if (!data || !data.spaces) return [];
+    return data.spaces.filter((s) => s.parent_service_slug === slug);
+  },
+);
+
+// rooms-page
+export const getAllRooms = cache(async (): Promise<{ rooms: RoomData[] }> => {
+  return readJson<{ rooms: RoomData[] }>(
+    path.join(DATA_DIR, "pages", "rooms.json"),
+    { rooms: [] },
+  );
+});
+
+export const getRoomsByServiceSlug = cache(
+  async (slug: string): Promise<RoomData[]> => {
+    const data = await getAllRooms();
+    if (!data || !data.rooms) return [];
+    return data.rooms.filter((r) => r.parent_service_slug === slug);
   },
 );
 

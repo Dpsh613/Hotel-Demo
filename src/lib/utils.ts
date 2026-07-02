@@ -7,6 +7,31 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+//currency-
+
+export function formatCurrency(
+  amount: number,
+  currency: string,
+  locale: string = "en-BE",
+): string {
+  if (amount === 0) return "—";
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
+export function formatCurrencyRange(
+  min: number,
+  max: number,
+  currency: string,
+): string {
+  if (min === max) return formatCurrency(min, currency);
+  return `${formatCurrency(min, currency)} – ${formatCurrency(max, currency)}`;
+}
+
 // what does this function do...
 
 export function isExternalUrl(url: string): boolean {

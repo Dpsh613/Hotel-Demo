@@ -95,3 +95,40 @@ export interface ServiceData {
   cta_section_ref?: string;
   sort_order: number;
 }
+
+// meeting-spaces Page interfaces
+export interface SpaceData {
+  slug: string;
+  parent_service_slug: string;
+  status: "published" | "draft";
+  name: string;
+  capacity_min?: number;
+  capacity_max: number;
+  capacity_label: string;
+  area_sqm?: number;
+  area_display?: string;
+  layout_styles?: string[];
+  special_features?: string[];
+  description_short: string;
+  description_long: string;
+  cover_image_ref?: string;
+  cover_image_alt?: string;
+  gallery_images?: HeroImage[];
+  gallery_trigger_label?: string;
+  sort_order: number;
+}
+
+export interface RoomData extends SpaceData {
+  room_type: "standard" | "deluxe" | "suite" | "custom";
+  room_count: number;
+  max_guests: number;
+  bed_configuration: string;
+  bathroom_type: "en-suite" | "shared" | "none";
+  bathroom_features?: string[];
+  rate_single?: number;
+  rate_double?: number;
+  rate_currency: string;
+  rate_from_text: boolean;
+  rate_note?: string;
+  exclusive_features?: string[];
+}

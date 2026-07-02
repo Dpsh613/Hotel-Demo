@@ -1,0 +1,87 @@
+{
+  "rooms": [
+    {
+      "slug": "standard-room",
+      "parent_service_slug": "stay-the-night",
+      "name": "Standard Room",
+      "room_type": "standard",
+      "room_count": 2,
+      "max_guests": 2,
+      "capacity_label": "1-2 GUESTS · 2 ROOMS",
+      "area_sqm": 20,
+      "area_display": "~20m²",
+      "bed_configuration": "King-size double bed",
+      "bathroom_type": "en-suite",
+      "rate_single": 235,
+      "rate_double": 300,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Rates differ during Tomorrowland weekends due to demand and limited availability",
+      "description_long": "A cozy and functional space for solo travelers or colleagues sharing a room.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970212/gallery-01_sv1qrt.jpg",
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970212/gallery-01_sv1qrt.jpg",
+          "alt_text": "Standard Room at GROVEside"
+        }
+      ],
+      "gallery_trigger_label": "OPEN GALLERY"
+    },
+    {
+      "slug": "deluxe-room",
+      "parent_service_slug": "stay-the-night",
+      "name": "Deluxe Room",
+      "room_type": "deluxe",
+      "room_count": 4,
+      "max_guests": 2,
+      "capacity_label": "1-2 GUESTS · 4 ROOMS",
+      "area_sqm": 30,
+      "area_display": "~30m²",
+      "bed_configuration": "King-size double bed",
+      "bathroom_type": "en-suite",
+      "rate_single": 265,
+      "rate_double": 330,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Rates differ during Tomorrowland weekends due to demand and limited availability",
+      "description_long": "A spacious and refined room with more comfort and space, ideal for longer stays.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970053/gallery-01_t8r6pa.jpg",
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970053/gallery-01_t8r6pa.jpg",
+          "alt_text": "Deluxe Room at GROVEside"
+        }
+      ],
+      "gallery_trigger_label": "OPEN GALLERY"
+    },
+    {
+      "slug": "executive-suite",
+      "parent_service_slug": "stay-the-night",
+      "name": "Executive Suite",
+      "room_type": "suite",
+      "room_count": 2,
+      "max_guests": 2,
+      "capacity_label": "1-2 GUESTS · 2 ROOMS",
+      "area_sqm": 35,
+      "area_display": "~35m²",
+      "bed_configuration": "King-size double bed",
+      "bathroom_type": "en-suite",
+      "bathroom_features": ["Walk-in shower", "Bathtub (Suite 2)"],
+      "exclusive_features": ["Private terrace (Suite 1)"],
+      "rate_single": 320,
+      "rate_double": 385,
+      "rate_currency": "EUR",
+      "rate_from_text": true,
+      "rate_note": "Rates differ during Tomorrowland weekends due to demand and limited availability",
+      "description_long": "Our most premium room, featuring a private terrace or bathtub depending on the suite. Perfect for those who want to indulge in a little extra comfort.",
+      "cover_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970100/gallery-01_sl0o9x.jpg",
+      "gallery_images": [
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782970100/gallery-01_sl0o9x.jpg",
+          "alt_text": "Executive Suite at GROVEside"
+        }
+      ],
+      "gallery_trigger_label": "OPEN GALLERY"
+    }
+  ]
+}
