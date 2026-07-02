@@ -22,6 +22,7 @@ import {
   CTABlock,
   Banner,
   CookiesData,
+  PrivacyData,
 } from "@/types"; // imported interface/ shape of object.
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -250,6 +251,13 @@ export const getCookiesData = cache(async (): Promise<CookiesData> => {
   return readJson<CookiesData>(
     path.join(DATA_DIR, "legal", "cookies.json"),
     {} as CookiesData,
+  );
+});
+
+export const getPrivacyData = cache(async (): Promise<PrivacyData> => {
+  return readJson<PrivacyData>(
+    path.join(DATA_DIR, "legal", "privacy.json"),
+    {} as PrivacyData,
   );
 });
 

@@ -32,6 +32,31 @@ export function formatCurrencyRange(
   return `${formatCurrency(min, currency)} – ${formatCurrency(max, currency)}`;
 }
 
+export function formatDate(
+  isoString: string,
+  format: string = "DD/MM/YYYY",
+): string {
+  const date = new Date(isoString);
+  if (isNaN(date.getTime())) return isoString;
+
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = String(date.getFullYear());
+
+  return format.replace("DD", day).replace("MM", month).replace("YYYY", year);
+}
+
+export function slugify(text: string): string {
+  if (!text) return "";
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+}
+
 // what does this function do...
 
 export function isExternalUrl(url: string): boolean {
