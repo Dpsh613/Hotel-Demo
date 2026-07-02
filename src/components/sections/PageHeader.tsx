@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getCTABySlug } from "@/lib/data/loaders";
-import { PageFadeIn } from "@/components/animation/PageFadeIn";
-import { ImageFadeIn } from "@/components/animation/ImageFadeIn";
+import { PageFadeIn } from "../animation/PageFadeIn";
+import { ImageFadeIn } from "../animation/ImageFadeIn";
 import type { Route } from "next";
 
 export interface PageHeaderProps {
