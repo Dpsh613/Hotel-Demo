@@ -11,6 +11,7 @@ import {
   HeroContent,
   FeatureGroup,
   OnePriceConcept,
+  EventsPageData,
   SpaceData,
   RoomData,
   ServiceData,
@@ -93,6 +94,13 @@ export const getHomePageData = cache(async (): Promise<HomePageData> => {
   return readJson<HomePageData>(
     path.join(DATA_DIR, "pages", "home.json"),
     {} as HomePageData,
+  );
+});
+
+export const getEventsPageData = cache(async (): Promise<EventsPageData> => {
+  return readJson<EventsPageData>(
+    path.join(DATA_DIR, "pages", "events.json"),
+    {} as EventsPageData,
   );
 });
 

@@ -132,3 +132,37 @@ export interface RoomData extends SpaceData {
   rate_note?: string;
   exclusive_features?: string[];
 }
+
+// business-events page
+
+export interface EventsPageData {
+  hero_image_ref?: string;
+  hero_mobile_ref?: string;
+  hero_image_alt?: string;
+  page_eyebrow?: string;
+  hero_headline?: string;
+  page_intro_paragraphs?: string[];
+  pricing_heading?: string;
+  pricing_paragraphs?: string[];
+  event_types: string[];
+  pricing: {
+    heading: string;
+    body: string;
+    catering_note: string;
+  };
+  versatile_setup_heading?: string;
+  versatile_setup_intro?: string;
+  versatile_setup_items?: {
+    image_ref: string;
+    alt_text: string;
+    caption: string;
+  }[];
+  tailored_heading?: string;
+  tailored_body?: string;
+  tailored_image_ref?: string;
+  tailored_image_alt?: string;
+  gallery_images: {
+    image_ref: string;
+    alt_text: string;
+  }[];
+}

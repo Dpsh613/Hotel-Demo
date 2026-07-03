@@ -135,12 +135,12 @@ export async function SiteFooter() {
             CODE & DESIGN
             <span className="mx-2 text-white/50">•</span>
             <a
-              href={siteConfig.credit_url || "https://rohittmehta.netlify.app"}
+              href={siteConfig.credit_url || ""}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 underline underline-offset-4 hover:text-white transition-colors"
             >
-              ROHIT MEHTA
+              DEEPIKA SHARMA
             </a>
           </div>
         </div>
