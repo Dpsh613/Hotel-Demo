@@ -1,0 +1,92 @@
+{
+  "page_title": "Contact",
+  "meta_title": "Contact Us | GROVEside",
+  "meta_description": "Get in touch with GROVEside.",
+  "show_social_links": true,
+  "show_address_block": true,
+  "show_maps_link": true,
+  "form_config": {
+    "fields": [
+      {
+        "name": "first_name",
+        "label": "First Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "last_name",
+        "label": "Last Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "telephone",
+        "label": "Telephone",
+        "type": "tel",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "request",
+        "label": "Request",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "name": "inquiry",
+        "label": "Inquiry",
+        "type": "radio",
+        "required": true,
+        "options": [
+          {
+            "label": "Booking",
+            "value": "booking"
+          },
+          {
+            "label": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "name": "contact_preference",
+        "label": "Contact Preference",
+        "type": "radio",
+        "required": true,
+        "options": [
+          {
+            "label": "Email",
+            "value": "email"
+          },
+          {
+            "label": "Phone",
+            "value": "phone"
+          }
+        ]
+      },
+      {
+        "name": "file_attachment",
+        "label": "File Attachment",
+        "type": "file",
+        "required": false,
+        "max_file_size_mb": 10
+      },
+      {
+        "name": "consent",
+        "label": "I consent to privacy policy",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "submit_label": "Submit",
+    "consent_text": "I consent",
+    "success_heading": "Success",
+    "success_body": "Thank you.",
+    "error_message": "Error submitting form."
+  }
+}

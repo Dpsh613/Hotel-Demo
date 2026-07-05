@@ -1,3 +1,5 @@
+import { ProximityPoint } from "./business";
+
 export interface HeroImage {
   image_ref: string;
   mobile_image_ref?: string;
@@ -131,6 +133,78 @@ export interface RoomData extends SpaceData {
   rate_from_text: boolean;
   rate_note?: string;
   exclusive_features?: string[];
+}
+
+// story-page
+export interface StoryChapter {
+  slug: string;
+  heading: string;
+  date_label?: string;
+  summary_text: string;
+  image_ref?: string;
+  image_alt?: string;
+  image_position?: "left" | "right" | "below";
+}
+
+export interface StoryPageData {
+  page_eyebrow: string;
+  page_title: string;
+  page_subtitle?: string;
+  meta_title: string;
+  meta_description: string;
+  hero_image_ref?: string;
+  hero_image_alt?: string;
+  chapters: StoryChapter[];
+  founder_note?: {
+    show: boolean;
+    heading: string;
+    member_ref: string;
+    custom_body?: string;
+    closing_salutation: string;
+  };
+}
+
+// practical-info page
+
+export interface PracticalInfoBlock {
+  slug: string;
+  icon_ref?: string;
+  heading: string;
+  content_type: "paragraph" | "list" | "distance-table" | "hours";
+  content: string | string[] | ProximityPoint[] | unknown; // Hours might be complex
+  note?: string;
+}
+
+// contact-page
+
+export interface ContactFormField {
+  name: string;
+  label: string;
+  type: "text" | "email" | "tel" | "textarea" | "radio" | "checkbox" | "file";
+  placeholder?: string;
+  required: boolean;
+  options?: { value: string; label: string }[];
+  validation_message?: string;
+  max_file_size_mb?: number;
+}
+
+export interface ContactPageData {
+  page_title: string;
+  page_subtitle?: string;
+  meta_title: string;
+  meta_description: string;
+  show_social_links: boolean;
+  show_address_block: boolean;
+  show_maps_link: boolean;
+  form_config: {
+    heading?: string;
+    fields: ContactFormField[];
+    submit_label: string;
+    consent_text: string;
+    success_heading: string;
+    success_body: string;
+    error_message: string;
+  };
 }
 
 // business-events page

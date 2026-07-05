@@ -1,6 +1,6 @@
 {
-  "hero_image_ref": "/images/events/hero-desktop.jpg",
-  "hero_mobile_ref": "/images/events/hero-mobile.jpg",
+  "hero_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782657349/hero-desktop_qauwbd.jpg",
+  "hero_mobile_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782657341/hero-mobile_gbdocq.jpg",
   "hero_image_alt": "GROVEside host welcoming guests at a business event",
   "page_eyebrow": "BUSINESS EVENTS",
   "hero_headline": "Host your next corporate event in a private, nature-infused setting designed to inspire and impress.",
@@ -56,7 +56,7 @@
   ],
   "tailored_heading": "Tailored Proposals and Personalised Support",
   "tailored_body": "Let us bring your vision to life. We are here to assist with layout, logistics and planning support, ensuring a smooth, stress-free experience. Simply tell us your plans and we will handle the rest.",
-  "tailored_image_ref": "/images/events/tailored-support.jpg",
+  "tailored_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783082602/tailored-support_zn3hdh.jpg",
   "tailored_image_alt": "GROVEside team member providing personalised event support",
   "gallery_images": [
     {

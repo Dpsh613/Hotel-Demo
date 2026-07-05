@@ -1,0 +1,78 @@
+{
+  "page_title": "Practical Information",
+  "meta_title": "Practical Info | GROVEside",
+  "meta_description": "Find practical information about visiting GROVEside.",
+  "hero_cta_ref": "primary-contact",
+  "info_blocks": [
+    {
+      "slug": "languages",
+      "heading": "Languages Spoken",
+      "content_type": "paragraph",
+      "content": "We speak English, Dutch, French and German to make communication seamless for all our guests."
+    },
+    {
+      "slug": "location",
+      "heading": "Location and Accessibility",
+      "content_type": "distance-table",
+      "content": [
+        {
+          "label": "Brussels Airport",
+          "distance_km": 25,
+          "distance_text": "25 km"
+        },
+        {
+          "label": "Brussels City Center",
+          "distance_km": 20,
+          "distance_text": "20 km"
+        },
+        {
+          "label": "Antwerp",
+          "distance_km": 30,
+          "distance_text": "30 km"
+        },
+        {
+          "label": "Mechelen",
+          "distance_km": 20,
+          "distance_text": "20 km"
+        }
+      ]
+    },
+    {
+      "slug": "parking",
+      "heading": "Parking",
+      "content_type": "paragraph",
+      "content": "Free private parking available on site for up to 10 cars.\n\nAdditional parking is available on the street.\n\nElectrical car charging available."
+    },
+    {
+      "slug": "technologies",
+      "heading": "Technologies",
+      "content_type": "list",
+      "content": [
+        "Screen Smart TV",
+        "High-Quality Sound",
+        "Barco ClickShare",
+        "Digital Flipchart",
+        "Super-Fast Wi-Fi",
+        "Power Outlets"
+      ],
+      "note": "We intentionally do not support video conferencing. GROVEside is designed to foster genuine, in-person interaction in a focused and inspiring environment."
+    },
+    {
+      "slug": "amenities",
+      "heading": "Amenities",
+      "content_type": "list",
+      "content": [
+        "Coffee Corner",
+        "Natural Daylight",
+        "Inspiring Views",
+        "Outdoor Terrace",
+        "The Summer House",
+        "Grove Animals"
+      ]
+    }
+  ],
+  "services_quicklinks": {
+    "heading": "Our Services",
+    "intro": "Quick access to everything we offer for an exceptional GROVEside experience."
+  }
+}

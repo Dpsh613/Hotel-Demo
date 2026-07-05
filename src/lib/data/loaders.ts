@@ -24,6 +24,9 @@ import {
   Banner,
   CookiesData,
   PrivacyData,
+  StoryPageData,
+  PracticalInfoBlock,
+  ContactPageData,
 } from "@/types"; // imported interface/ shape of object.
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -168,6 +171,39 @@ export const getRoomsByServiceSlug = cache(
   },
 );
 
+// story-page
+export const getStoryPageData = cache(async (): Promise<StoryPageData> => {
+  return readJson<StoryPageData>(
+    path.join(DATA_DIR, "pages", "story.json"),
+    {} as StoryPageData,
+  );
+});
+
+// practical page
+export const getPracticalPageData = cache(
+  async (): Promise<{
+    page_title: string;
+    page_subtitle?: string;
+    meta_title: string;
+    meta_description: string;
+    hero_cta_ref?: string;
+    info_blocks: PracticalInfoBlock[];
+    services_quicklinks?: { heading: string; intro?: string };
+  }> => {
+    return readJson<any>(path.join(DATA_DIR, "pages", "practical.json"), {
+      info_blocks: [],
+    });
+  },
+);
+
+// contact page
+export const getContactPageData = cache(async (): Promise<ContactPageData> => {
+  return readJson<ContactPageData>(
+    path.join(DATA_DIR, "pages", "contact.json"),
+    {} as ContactPageData,
+  );
+});
+
 // Components loaders
 // HeroSlideShow Component
 
@@ -291,5 +327,18 @@ export const getNavigationConfig = cache(
       path.join(CONFIG_DIR, "navigation.config.json"),
       {} as NavigationConfig,
     );
+  },
+);
+
+// team member
+
+export const getTeamMemberBySlug = cache(
+  async (slug: string): Promise<any | null> => {
+    const data = await readJson<{ members: any[] }>(
+      path.join(DATA_DIR, "business", "team.json"),
+      { members: [] },
+    );
+    if (!data || !data.members) return null;
+    return data.members.find((m) => m.slug === slug) || null;
   },
 );
