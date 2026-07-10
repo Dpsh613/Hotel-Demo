@@ -1,39 +1,39 @@
 {
   "section_heading": "OUR VALUES",
-  "section_subheading": "What drive us at our core",
+  "section_subheading": "The heart of every CelestialEve experience",
   "values": [
     {
       "slug": "freedom",
-      "label": "Freedom",
-      "description": "Empowering you to shape your time with us.",
+      "label": "Warm Hospitality",
+      "description": "Making every guest feel genuinely welcomed, cared for and at home.",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719404/freedom_fkspij.jpg",
       "sort_order": 1
     },
     {
       "slug": "sustainability",
-      "label": "Sustainability",
-      "description": "Building a greener future with eco-conscious choices.",
+      "label": "Togetherness",
+      "description": "Bringing families, friends and teams closer through meaningful shared moments.",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719404/sustainability_xq2jrr.jpg",
       "sort_order": 2
     },
     {
       "slug": "exclusivity",
-      "label": "Exclusivity",
-      "description": "Creating tailored, private experiences.",
+      "label": "Celebration",
+      "description": "Providing beautiful settings for life's special occasions and unforgettable memories",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719403/exclusivity_mbh5j1.jpg",
       "sort_order": 3
     },
     {
       "slug": "comfort",
       "label": "Comfort",
-      "description": "Balancing modern luxury with a homely atmosphere.",
+      "description": "Creating cozy spaces where you can relax, recharge and truly unwind",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719408/comfort_xlkqgm.jpg",
       "sort_order": 4
     },
     {
       "slug": "inspiration",
-      "label": "Inspiration",
-      "description": "Encouraging creativity and relaxation through our grove-inspired design.",
+      "label": "Nature",
+      "description": "Offering peaceful surroundings that inspire relaxation and a deeper connection with nature.",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782719403/inspiration_zujyxo.jpg",
       "sort_order": 5
     }

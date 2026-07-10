@@ -3,24 +3,24 @@
     {
       "slug": "home-hero",
       "type": "slideshow",
-      "eyebrow_text": "Welcome to The Golden Crown",
+      "eyebrow_text": "Welcome to CelestialEve",
       "headline_parts": [
-        { "text": "Experience a New Way", "emphasis": false },
-        { "text": "of Business Stay and Events", "emphasis": false }
+        { "text": "Come for the Escape", "emphasis": false },
+        { "text": "Stay for the Feeling", "emphasis": true }
       ],
       "subheadline": null,
-      "show_cta": false,
+      "show_cta": true,
       "text_position": "bottom-left",
       "slideshow_images": [
         {
           "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279464/hero-01_cqc7mp.png",
           "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279708/hero-01_h7zbxe.png",
-          "alt_text": "The Golden Crown exterior/interior 1"
+          "alt_text": "CelestialEve exterior/interior 1"
         },
         {
           "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279582/hero-02_rswvmh.png",
           "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279764/hero-02_peamp7.png",
-          "alt_text": "The GOlden Crown exterior/interior 2"
+          "alt_text": "CelestialEve exterior/interior 2"
         }
       ]
     }

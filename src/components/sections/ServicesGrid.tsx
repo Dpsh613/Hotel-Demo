@@ -4,7 +4,7 @@ import { ServiceCard } from "../cards/ServiceCard";
 import { SectionReveal } from "../animation/SectionReveal";
 
 interface ServicesGridProp {
-  data?: HomePageData["services_section"] & { intro_text?: string };
+  data?: HomePageData["services_section"];
 }
 
 export async function ServicesGrid({ data }: ServicesGridProp) {
@@ -27,11 +27,11 @@ export async function ServicesGrid({ data }: ServicesGridProp) {
           {data.heading && (
             <SectionReveal className="text-center lg:text-left mb-10 md:mb-14">
               <h2 className="text-[32px] md:text-[40px] text-[#111] font-display font-semibold mb-6">
-                {data.heading}
+                {data.heading.title}
               </h2>
-              {(data as any).intro_text && (
+              {data.intro_text && (
                 <p className="text-[15px] md:text-[16px] text-[#666] leading-relaxed max-w-full lg:max-w-[50%]">
-                  {(data as any).intro_text}
+                  {data.intro_text}
                 </p>
               )}
             </SectionReveal>

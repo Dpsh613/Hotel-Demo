@@ -1,24 +1,29 @@
 {
-  "meta_title": "The Golden Crown - where work meets comfort",
-  "meta_description": "Experience a new way of business stay and events at the Golden Crown.",
+  "meta_title": "CelestialEve - Where Every Stay Feels Like Home",
+  "meta_description": "Come for the Escape, Stay for the Feeling at CelestialEve.",
   "hero": {
-    "eyebrow_text": "Where work meets comfort",
-    "headline": "Welcome to The Golden Crown",
+    "eyebrow_text": "Where Every Stay Feels Like Home",
+    "headline": "Welcome to CelestialEve",
     "headline_emphasis": "Form",
-    "subheadline": "Experience a New Way of Business Stay and Events"
+    "subheadline": "Come for the Escape, Stay for the Feeling"
   },
   "about_section": {
     "show_section": true,
-    "heading": "A new way to experience business and leisure.",
+    "heading": {
+      "eyebrow": "Where Every Stay Feels Like Home",
+      "title": "A place to unwind, celebrate and reconnect."
+    },
     "body_paragraphs": [
-      "The Golden Crown is an innovative hospitality concept bridging the gap between professional productivity and rural tranquility. We believe that great ideas are born when you step away from the noise.",
-      "Our uniquely designed spaces offer everything from highly-equipped boardrooms to relaxing wellness areas, ensuring that whether you're hosting a corporate retreat or an intensive workshop, you have the ideal environment to succeed."
+      "CelestialEve is a peaceful destination created for unforgettable stays, meaningful celebrations and moments shared with the people who matter most. Surrounded by nature and designed for comfort, it's a place where you can truly slow down and feel at home.",
+      "Whether you're planning a family getaway, a special celebration, a weekend escape, or a corporate gathering, our thoughtfully designed spaces, cozy accommodations and welcoming atmosphere provide the perfect setting for every occasion."
     ]
   },
   "services_section": {
     "show_section": true,
-    "heading": "Our Services",
-    "intro_text": "Let The Golden Crown be your space where business meets tranquility. Host strategic meetings, launch products, collaborate with your team or unwind in comfort. With inspiring meeting spaces, private accommodations and serene surroundings, The Golden Crown offers the perfect balance of productivity and relaxation – day and night.",
+    "heading": {
+      "title": "Experiences We Offer"
+    },
+    "intro_text": "From peaceful weekend escapes and family vacations to weddings, celebrations and corporate events, CelestialEve offers versatile spaces designed to bring people together. Enjoy comfortable stays, beautiful surroundings and warm hospitality that make every visit memorable.",
     "layout_variant": "grid-3"
   }
 }

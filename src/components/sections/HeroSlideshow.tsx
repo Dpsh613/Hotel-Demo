@@ -152,14 +152,12 @@ export function HeroSlideshow({ hero }: HeroSlideshowProps) {
       <div className="absolute z-30 bottom-[48px] left-0 right-0 pl-6 md:pl-[60px] pr-6 pointer-events-none">
         <div className="max-w-[500px]">
           {hero.eyebrow_text && (
-            <div className="text-[16px] tracking-[0.15em] text-white/90 mb-2   uppercase font-semibold">
+            <div className="text-[16px] tracking-[0.15em] text-white/90 mb-2 uppercase font-semibold">
               {hero.eyebrow_text.split("SIDE").map((part, i, arr) => (
                 <span key={i}>
                   {part}
                   {i < arr.length - 1 && (
-                    <em className="font-display italic tracking-normal">
-                      SIDE
-                    </em>
+                    <em className="font-display italic tracking-normal">Eve</em>
                   )}
                 </span>
               ))}

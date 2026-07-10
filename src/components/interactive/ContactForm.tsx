@@ -36,7 +36,12 @@ export function ContactForm({
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [globalErrorMsg, setGlobalErrorMsg] = useState("");
+
+  // NEW: Real-time validation state
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   const successHeadingRef = useRef<HTMLHeadingElement>(null);
   const prefersReducedMotion = useReducedMotion();
@@ -47,15 +52,54 @@ export function ContactForm({
     }
   }, [status]);
 
+  // Helper function to validate a single field
+  const validateField = (field: ContactFormField, value: string) => {
+    if (field.required && !value.trim()) return `This field is required.`;
+    if (field.type === "email" && value.trim()) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) return "Please enter a valid email address.";
+    }
+    return "";
+  };
+
   const handleTextChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    setTextFields((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setTextFields((prev) => ({ ...prev, [name]: value }));
+
+    // Instantly clear or update the error as they type, if they've already touched the field
+    if (touched[name]) {
+      const field = formConfig.fields.find((f) => f.name === name);
+      if (field) {
+        setFieldErrors((prev) => ({
+          ...prev,
+          [name]: validateField(field, value),
+        }));
+      }
+    }
+  };
+
+  // Triggered when a user clicks OUT of a field
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+
+    const field = formConfig.fields.find((f) => f.name === name);
+    if (field) {
+      setFieldErrors((prev) => ({
+        ...prev,
+        [name]: validateField(field, value),
+      }));
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0] || null);
+      setFieldErrors((prev) => ({ ...prev, file_input: "" })); // Clear error
     } else {
       setFile(null);
     }
@@ -63,8 +107,58 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // 1. Run full validation on ALL fields before submitting
+    let isValid = true;
+    const newErrors: Record<string, string> = {};
+    const newTouched: Record<string, boolean> = {};
+
+    formConfig.fields.forEach((field) => {
+      if (["text", "email", "tel", "textarea"].includes(field.type)) {
+        const val = textFields[field.name] || "";
+        const err = validateField(field, val);
+        if (err) {
+          isValid = false;
+          newErrors[field.name] = err;
+        }
+        newTouched[field.name] = true;
+      }
+      if (
+        field.type === "radio" &&
+        field.required &&
+        !radioValues[field.name]
+      ) {
+        isValid = false;
+        newErrors[field.name] = "Please select an option.";
+        newTouched[field.name] = true;
+      }
+      if (field.type === "file" && field.required && !file) {
+        isValid = false;
+        newErrors[field.name] = "A file is required.";
+        newTouched[field.name] = true;
+      }
+    });
+
+    if (
+      formConfig.fields.some((f) => f.name === "consent" && f.required) &&
+      !consent
+    ) {
+      isValid = false;
+      newErrors["consent"] = "You must agree to the privacy policy.";
+      newTouched["consent"] = true;
+    }
+
+    if (!isValid) {
+      setFieldErrors(newErrors);
+      setTouched(newTouched);
+      setStatus("error");
+      setGlobalErrorMsg("Please fix the highlighted fields above.");
+      return;
+    }
+
+    // 2. If valid, proceed with submission
     setStatus("loading");
-    setErrorMsg("");
+    setGlobalErrorMsg("");
 
     const formData = new FormData();
     Object.entries(textFields).forEach(([key, value]) =>
@@ -75,8 +169,9 @@ export function ContactForm({
     );
     formData.append("consent", consent ? "true" : "false");
 
-    if (file) {
-      formData.append("file_attachment", file);
+    const fileField = formConfig.fields.find((f) => f.type === "file");
+    if (file && fileField) {
+      formData.append(fileField.name, file);
     }
 
     try {
@@ -90,11 +185,15 @@ export function ContactForm({
         setStatus("success");
       } else {
         setStatus("error");
-        setErrorMsg(data.message || formConfig.error_message);
+        if (data.errors && data.errors.length > 0) {
+          setGlobalErrorMsg(data.errors.join(" | "));
+        } else {
+          setGlobalErrorMsg(data.message || formConfig.error_message);
+        }
       }
     } catch (err) {
       setStatus("error");
-      setErrorMsg(formConfig.error_message);
+      setGlobalErrorMsg(formConfig.error_message);
     }
   };
 
@@ -124,12 +223,12 @@ export function ContactForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-      {status === "error" && (
+      {status === "error" && globalErrorMsg && (
         <div
           role="alert"
-          className="p-4 bg-destructive/10 text-destructive rounded-base border border-destructive/20"
+          className="p-4 bg-destructive/10 text-destructive rounded-base border border-destructive/20 text-sm"
         >
-          {errorMsg}
+          {globalErrorMsg}
         </div>
       )}
 
@@ -140,6 +239,7 @@ export function ContactForm({
           const gridClass = isHalfWidth
             ? "col-span-1"
             : "col-span-1 md:col-span-2";
+          const hasError = touched[field.name] && fieldErrors[field.name];
 
           if (
             field.type === "text" ||
@@ -157,16 +257,32 @@ export function ContactForm({
                   type={field.type}
                   placeholder={(field.placeholder || field.label).toUpperCase()}
                   required={field.required}
+                  maxLength={field.max_length || 100}
                   aria-required={field.required ? "true" : undefined}
+                  aria-invalid={hasError ? "true" : "false"}
                   value={textFields[field.name] || ""}
                   onChange={handleTextChange}
-                  className="bg-transparent h-[52px] text-xs uppercase tracking-wider text-text-primary border-border-subtle hover:border-text-primary transition-colors focus-visible:ring-text-primary focus-visible:border-text-primary placeholder:text-text-primary"
+                  onBlur={handleBlur} // NEW: Trigger validation when user leaves field
+                  className={cn(
+                    "bg-transparent h-[52px] text-xs uppercase tracking-wider text-text-primary transition-colors focus-visible:ring-text-primary focus-visible:border-text-primary placeholder:text-text-primary",
+                    hasError
+                      ? "border-destructive text-destructive focus-visible:ring-destructive focus-visible:border-destructive placeholder:text-destructive/50"
+                      : "border-border-subtle hover:border-text-primary",
+                  )}
                 />
+                {hasError && (
+                  <p className="text-[10px] text-destructive uppercase tracking-wider mt-1.5 pl-2">
+                    {fieldErrors[field.name]}
+                  </p>
+                )}
               </div>
             );
           }
 
           if (field.type === "textarea") {
+            const currentLength = (textFields[field.name] || "").length;
+            const maxLength = field.max_length || 2000;
+
             return (
               <div key={field.name} className={gridClass}>
                 <Label htmlFor={field.name} className="sr-only">
@@ -177,11 +293,39 @@ export function ContactForm({
                   name={field.name}
                   placeholder={(field.placeholder || field.label).toUpperCase()}
                   required={field.required}
+                  maxLength={maxLength}
                   aria-required={field.required ? "true" : undefined}
+                  aria-invalid={hasError ? "true" : "false"}
                   value={textFields[field.name] || ""}
                   onChange={handleTextChange}
-                  className="bg-transparent min-h-[120px] text-xs uppercase tracking-wider text-text-primary border-border-subtle hover:border-text-primary transition-colors focus-visible:ring-text-primary focus-visible:border-text-primary placeholder:text-text-primary"
+                  onBlur={handleBlur} // NEW: Trigger validation
+                  className={cn(
+                    "bg-transparent min-h-[120px] text-xs uppercase tracking-wider text-text-primary transition-colors focus-visible:ring-text-primary focus-visible:border-text-primary placeholder:text-text-primary",
+                    hasError
+                      ? "border-destructive text-destructive focus-visible:ring-destructive focus-visible:border-destructive placeholder:text-destructive/50"
+                      : "border-border-subtle hover:border-text-primary",
+                  )}
                 />
+                <div className="flex justify-between items-start mt-1.5 px-2">
+                  <div className="flex-1">
+                    {hasError && (
+                      <p className="text-[10px] text-destructive uppercase tracking-wider">
+                        {fieldErrors[field.name]}
+                      </p>
+                    )}
+                  </div>
+                  {/* NEW: Character Counter */}
+                  <span
+                    className={cn(
+                      "text-[10px] uppercase tracking-wider tabular-nums",
+                      currentLength >= maxLength
+                        ? "text-destructive font-bold"
+                        : "text-text-secondary",
+                    )}
+                  >
+                    {currentLength} / {maxLength}
+                  </span>
+                </div>
               </div>
             );
           }
@@ -200,12 +344,12 @@ export function ContactForm({
                 </legend>
                 <RadioGroup
                   value={radioValues[field.name]}
-                  onValueChange={(val) =>
-                    setRadioValues((prev) => ({ ...prev, [field.name]: val }))
-                  }
+                  onValueChange={(val) => {
+                    setRadioValues((prev) => ({ ...prev, [field.name]: val }));
+                    if (touched[field.name])
+                      setFieldErrors((prev) => ({ ...prev, [field.name]: "" }));
+                  }}
                   className="flex flex-col sm:flex-row gap-4"
-                  required={field.required}
-                  aria-required={field.required ? "true" : undefined}
                 >
                   {field.options?.map((opt) => (
                     <div key={opt.value} className="flex-1 relative">
@@ -221,6 +365,9 @@ export function ContactForm({
                           radioValues[field.name] === opt.value
                             ? "bg-text-primary text-text-on-dark border-text-primary font-medium"
                             : "bg-transparent text-text-primary border-border-subtle hover:border-text-primary font-normal",
+                          hasError &&
+                            !radioValues[field.name] &&
+                            "border-destructive text-destructive",
                         )}
                       >
                         {opt.label}
@@ -228,6 +375,11 @@ export function ContactForm({
                     </div>
                   ))}
                 </RadioGroup>
+                {hasError && (
+                  <p className="text-[10px] text-destructive uppercase tracking-wider mt-1.5 pl-2">
+                    {fieldErrors[field.name]}
+                  </p>
+                )}
               </fieldset>
             );
           }
@@ -241,18 +393,17 @@ export function ContactForm({
                     <span className="text-brand-secondary">*</span>
                   )}
                 </Label>
-                {field.max_file_size_mb && (
-                  <p className="text-[11px] text-text-secondary uppercase tracking-wider mb-2">
-                    Maximum allowed size: {field.max_file_size_mb} MB
-                  </p>
-                )}
                 <div className="flex flex-col items-start gap-2">
                   <Button
                     type="button"
                     variant="secondary"
                     onClick={() => fileInputRef.current?.click()}
-                    aria-controls={`${field.name}-input`}
-                    className="h-10 px-6 rounded-full border border-border-subtle text-xs uppercase tracking-wider text-text-primary hover:border-text-primary bg-transparent"
+                    className={cn(
+                      "h-10 px-6 rounded-full border text-xs uppercase tracking-wider bg-transparent transition-colors",
+                      hasError && !file
+                        ? "border-destructive text-destructive hover:border-destructive"
+                        : "border-border-subtle text-text-primary hover:border-text-primary",
+                    )}
                   >
                     Choose File <span className="ml-1">↑</span>
                   </Button>
@@ -264,32 +415,16 @@ export function ContactForm({
                     ref={fileInputRef}
                     type="file"
                     name={field.name}
-                    accept="*/*"
+                    accept="image/jpeg, image/png, application/pdf"
                     onChange={handleFileChange}
                     className="sr-only"
-                    required={field.required && !file}
-                    aria-required={field.required ? "true" : undefined}
-                    aria-describedby={
-                      field.max_file_size_mb &&
-                      file &&
-                      file.size / (1024 * 1024) > field.max_file_size_mb
-                        ? `${field.name}-error`
-                        : undefined
-                    }
                   />
                 </div>
-                {file &&
-                  field.max_file_size_mb &&
-                  file.size / (1024 * 1024) > field.max_file_size_mb && (
-                    <p
-                      id={`${field.name}-error`}
-                      role="alert"
-                      className="text-[11px] text-destructive uppercase tracking-wider mt-2"
-                    >
-                      {field.validation_message ||
-                        `File exceeds ${field.max_file_size_mb}MB limit.`}
-                    </p>
-                  )}
+                {hasError && (
+                  <p className="text-[10px] text-destructive uppercase tracking-wider mt-1.5 pl-2">
+                    {fieldErrors[field.name]}
+                  </p>
+                )}
               </div>
             );
           }
@@ -298,30 +433,42 @@ export function ContactForm({
             return (
               <div
                 key={field.name}
-                className="col-span-1 md:col-span-2 pt-8 mt-4 border-t border-transparent"
+                className="col-span-1 md:col-span-2 pt-8 mt-4 border-2"
               >
                 <Checkbox
                   id={field.name}
                   checked={consent}
-                  onCheckedChange={(val) => setConsent(val as boolean)}
-                  required={field.required}
-                  aria-required={field.required ? "true" : undefined}
+                  onCheckedChange={(val) => {
+                    setConsent(val as boolean);
+                    if (touched.consent)
+                      setFieldErrors((prev) => ({ ...prev, consent: "" }));
+                  }}
                   className="sr-only"
                 />
                 <Label
                   htmlFor={field.name}
-                  className="text-[10px] font-bold text-text-secondary uppercase tracking-widest leading-relaxed cursor-pointer hover:text-text-primary transition-colors block"
+                  className={cn(
+                    "text-[10px] font-bold uppercase tracking-widest leading-relaxed cursor-pointer transition-colors block",
+                    hasError && !consent
+                      ? "text-destructive hover:text-destructive/80"
+                      : "text-text-secondary hover:text-text-primary",
+                  )}
                 >
                   BY SUBMITTING THIS FORM, YOU CONSENT TO THE USE OF YOUR DATA
                   IN ACCORDANCE WITH OUR{" "}
                   <Link
                     href={privacyPolicyUrl as any}
-                    className="underline underline-offset-4 hover:text-text-primary"
+                    className="underline underline-offset-4"
                   >
                     PRIVACY POLICY
                   </Link>
                   .
                 </Label>
+                {hasError && !consent && (
+                  <p className="text-[10px] text-destructive uppercase tracking-wider mt-1.5 pl-2">
+                    {fieldErrors[field.name]}
+                  </p>
+                )}
               </div>
             );
           }

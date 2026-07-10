@@ -1,31 +1,21 @@
 {
-  "phone": "+1 555 123 4567",
-  "phone_uri": "tel:+15551234567",
-  "email": "info@example.com",
-  "address_line_1": "123 Demo Street",
-  "city": "Demoville",
-  "postcode": "9999",
-  "country": "Demoland",
-  "country_code": "DL",
+  "phone": "+1 653 321 9056",
+  "phone_uri": "tel:+16533219056",
+  "email": "celestialeve@gmail.com",
+  "address_line_1": "123 Main Street",
+  "city": "Nowhere",
+  "postcode": "456778",
+  "country": "Albama",
+  "country_code": "Al",
   "maps_link": "https://maps.app.goo.gl/dummy",
   "proximity_points": [
     {
-      "label": "Brussels Airport",
+      "label": "Great St. Church",
       "distance_km": 25,
       "distance_text": "25km"
     },
     {
-      "label": "Brussels City Center",
-      "distance_km": 20,
-      "distance_text": "20km"
-    },
-    {
-      "label": "Antwerp",
-      "distance_km": 30,
-      "distance_text": "30km"
-    },
-    {
-      "label": "Mechelen",
+      "label": "Main City Center",
       "distance_km": 20,
       "distance_text": "20km"
     }

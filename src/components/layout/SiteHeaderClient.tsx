@@ -49,16 +49,13 @@ export function SiteHeaderClient({
   const pathname = usePathname();
   const isLightHeader = pathname === "/" || pathname === "/business-events";
 
-  const [isPastHero, setIsPastHero] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Scroll behavior is active on all pages now
-  const isScrolled = isPastHero;
 
   useEffect(() => {
     const handleScroll = () => {
       const shouldCollapse = window.scrollY > 150;
-      setIsPastHero((current) =>
+      setIsScrolled((current) =>
         current === shouldCollapse ? current : shouldCollapse,
       );
     };
@@ -74,66 +71,37 @@ export function SiteHeaderClient({
     ? "Close navigation menu"
     : "Open navigation menu";
 
+  // --- DRY Extractions ---
+  const textColorClass = isLightHeader ? "text-white" : "text-[#111]";
+  const transitionClass = "transition-all duration-700 ease-out";
+  const homeLinkProps = {
+    href: "/" as Route,
+    onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+  };
+
   return (
     <>
       <header role="banner" className="groveside-site-header">
         <div className="groveside-site-header__inner">
-          {/* Left Element */}
+          {/* Left Element (Tagline only) */}
           <div className="relative z-10 flex items-center h-12 w-full">
-            {/* Scrolled State: Small Logo Button */}
             <Link
-              href={"/" as Route}
-              aria-label={`${businessName} home`}
-              onClick={(e) => {
-                if (pathname === "/") {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
+              {...homeLinkProps}
               className={cn(
-                "absolute left-0 flex size-12 flex-none items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-out",
-                isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
-              )}
-            >
-              <Image
-                src="/images/brand/logo-icon.svg"
-                alt=""
-                width={24}
-                height={24}
-                className="size-10 object-contain brightness-0 invert"
-                unoptimized
-              />
-            </Link>
-
-            {/* Unscrolled State: Tagline */}
-            <Link
-              href={"/" as Route}
-              onClick={(e) => {
-                if (pathname === "/") {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
-              className={cn(
-                "absolute left-0 hidden lg:flex items-center gap-2 transition-all duration-700 ease-out",
+                "absolute left-0 hidden lg:flex items-center gap-2",
+                transitionClass,
                 !isScrolled ? "opacity-100" : "opacity-0 pointer-events-none",
-                isLightHeader ? "text-white" : "text-[#111]",
+                textColorClass,
               )}
               aria-label={`${brandTagline} - ${businessName} home`}
             >
-              <TreePalm
-                strokeWidth={1.5}
-                className={cn(
-                  "size-[22px] shrink-0",
-                  isLightHeader ? "text-white" : "text-[#111]",
-                )}
-              />
-              <span
-                className={cn(
-                  "text-[14px] font-semibold uppercase tracking-[0.15em]",
-                  isLightHeader ? "text-white" : "text-[#111]",
-                )}
-              >
+              <TreePalm strokeWidth={1.5} className="size-[22px] shrink-0" />
+              <span className="text-[14px] font-semibold uppercase tracking-[0.15em]">
                 {brandTagline}
               </span>
             </Link>
@@ -142,20 +110,15 @@ export function SiteHeaderClient({
           {/* Center Element */}
           <div className="relative flex items-center justify-start lg:justify-center h-12 w-full">
             <Link
-              href={"/" as Route}
+              {...homeLinkProps}
               aria-label={`${businessName} home`}
-              onClick={(e) => {
-                if (pathname === "/") {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
               className={cn(
-                "absolute left-0 lg:left-auto flex items-center gap-2 transition-all duration-700 ease-out",
+                "absolute left-0 lg:left-auto flex items-center gap-2",
+                transitionClass,
                 !isScrolled
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-4 pointer-events-none",
-                isLightHeader ? "text-white" : "text-[#111]",
+                textColorClass,
               )}
             >
               <Image
@@ -175,12 +138,11 @@ export function SiteHeaderClient({
               />
               <span
                 className={cn(
-                  "text-[26px] md:text-[34px] tracking-wide font-normal",
+                  "text-[26px] md:text-[34px] tracking-wide italic font-semibold font-display",
                   isLightHeader ? "text-white" : "text-[#111]",
                 )}
               >
-                GROVE
-                <span className="italic font-semibold font-display">side</span>
+                CelestialEve
               </span>
             </Link>
           </div>
@@ -193,8 +155,8 @@ export function SiteHeaderClient({
             aria-label={menuButtonLabel}
             onClick={() => setIsMenuOpen((current) => !current)}
             className={cn(
-              "z-[60] flex cursor-pointer items-center gap-[10px] justify-self-end",
-              "transition-all duration-700 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+              "z-[60] flex cursor-pointer items-center gap-[10px] justify-self-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+              transitionClass,
               isMenuOpen ? "opacity-0 pointer-events-none" : "hover:opacity-70",
               isScrolled
                 ? "bg-black text-white rounded-xl px-[18px] h-10 focus-visible:outline-black"

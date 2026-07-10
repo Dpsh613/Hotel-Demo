@@ -1,5 +1,5 @@
 {
-  "name": "the-golden-crown",
+  "name": "celestial-eve",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
     "@base-ui/react": "^1.6.0",
     "@gsap/react": "^2.1.2",
     "@tailwindcss/typography": "^0.5.20",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.0",
@@ -27,6 +29,7 @@
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
+    "resend": "^6.17.1",
     "swiper": "^14.0.0",
     "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7",

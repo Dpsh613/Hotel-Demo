@@ -31,10 +31,10 @@ export interface FeatureGroup {
 }
 
 export interface ValueItem {
-  image_ref: string | StaticImport;
   slug: string;
   label: string;
   description: string;
+  image_ref: string | StaticImport;
   icon_ref?: string;
   sort_order: number;
 }
@@ -57,6 +57,7 @@ export interface NewsletterData {
   error_message: string;
   notice_label?: string;
   show_on_all_pages: boolean;
+  max_email_length?: number;
 }
 
 export interface Banner {

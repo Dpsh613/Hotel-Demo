@@ -16,6 +16,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [errorMsg, setErrorMsg] = useState(""); // Track actual API errors
   const prefersReducedMotion = useReducedMotion();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,13 +24,28 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
     if (!consent) return;
 
     setStatus("loading");
+    setErrorMsg("");
 
     try {
-      // Simulate API submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setStatus("success");
+      // THE FIX: Call the actual backend API
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, consent }),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("success");
+        setEmail(""); // Clear the input on success
+      } else {
+        setStatus("error");
+        setErrorMsg(result.message || data.error_message);
+      }
     } catch {
       setStatus("error");
+      setErrorMsg(data.error_message);
     }
   };
 
@@ -43,6 +59,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
             onChange={(e) => setEmail(e.target.value)}
             placeholder={data.input_placeholder || "EMAIL"}
             required
+            maxLength={data.max_email_length || 254} // SECURITY FIX: Stop massive strings
             aria-label="Email address"
             className="flex-1 bg-transparent text-white placeholder:text-white/40 px-6 py-3 text-[14px] border-none outline-none focus:ring-0"
           />
@@ -104,7 +121,7 @@ export function NewsletterForm({ data }: NewsletterFormProps) {
               role="alert"
               className="text-red-400 text-center text-[13px] font-medium"
             >
-              {data.error_message}
+              {errorMsg}
             </p>
           </motion.div>
         )}

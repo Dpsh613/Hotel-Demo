@@ -11,31 +11,35 @@
         "name": "first_name",
         "label": "First Name",
         "type": "text",
-        "required": true
+        "required": true,
+        "max_length": 50
       },
       {
         "name": "last_name",
         "label": "Last Name",
         "type": "text",
-        "required": true
+        "required": true,
+        "max_length": 50
       },
       {
         "name": "telephone",
         "label": "Telephone",
         "type": "tel",
-        "required": true
+        "max_length": 20
       },
       {
         "name": "email",
         "label": "Email",
         "type": "email",
-        "required": true
+        "required": true,
+        "max_length": 50
       },
       {
         "name": "request",
         "label": "Request",
         "type": "textarea",
-        "required": true
+        "required": true,
+        "max_length": 1500
       },
       {
         "name": "inquiry",

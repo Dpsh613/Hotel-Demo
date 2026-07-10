@@ -42,13 +42,22 @@ export interface HomePageData {
   };
   about_section?: {
     show_section: boolean;
-    heading: string;
+    heading: {
+      eyebrow?: string;
+      title: string;
+      subtitle?: string;
+    };
     body_paragraphs: string[];
   };
   services_section?: {
     show_section?: boolean;
-    heading?: string;
-    intro?: string;
+    heading: {
+      eyebrow?: string;
+      title: string;
+      subtitle?: string;
+    };
+    intro_text?: string;
+    layout_variant?: string;
   };
   features_section?: Record<string, unknown>;
   values_section?: Record<string, unknown>;
@@ -186,6 +195,7 @@ export interface ContactFormField {
   options?: { value: string; label: string }[];
   validation_message?: string;
   max_file_size_mb?: number;
+  max_length?: number;
 }
 
 export interface ContactPageData {
