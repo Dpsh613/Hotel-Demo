@@ -42,6 +42,7 @@ export interface FeaturesConfig {
   pricing_visible?: boolean;
   enableBlog?: boolean;
   enableEcommerce?: boolean;
+  floating_contact_widget?: boolean;
   [key: string]: boolean | undefined;
 }
 

@@ -57,6 +57,13 @@ export function slugify(text: string): string {
     .replace(/--+/g, "-");
 }
 
+export function resolveImagePath(ref: string): string {
+  if (!ref) return "";
+  if (ref.startsWith("http://") || ref.startsWith("https://")) return ref;
+  if (ref.startsWith("/")) return ref;
+  return `/${ref}`;
+}
+
 // what does this function do...
 
 export function isExternalUrl(url: string): boolean {

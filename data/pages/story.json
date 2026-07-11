@@ -2,15 +2,15 @@
   "page_title": "Our Story",
   "page_eyebrow": "OUR STORY",
   "page_subtitle": "From Idea to Reality",
-  "meta_title": "Our Story | GROVEside",
-  "meta_description": "Discover the story behind GROVEside.",
+  "meta_title": "Our Story | CelestialEve",
+  "meta_description": "Discover the story behind CelestialEve.",
   "hero_image_ref": null,
   "chapters": [
     {
       "slug": "the-beginning",
       "heading": "The Beginning (2011)",
       "image_ref": "https://res.cloudthinary.com/dsbslj3nb/image/upload/v1783167539/story-1_uzb3wh.jpg",
-      "image_alt": "The GROVEside grove building exterior in 2011",
+      "image_alt": "The CelestialEve grove building exterior in 2011",
       "image_position": "right",
       "body": "We bought this old grove in July 2011 with a bold idea: not to wait until retirement to build 'our job for later', but to create it now. After 25 years in the corporate world and countless business trips, we wanted to create a place that felt different – where work, rest and freedom could truly come together in a more human way."
     },
@@ -18,31 +18,31 @@
       "slug": "a-family-project",
       "heading": "A Family Project",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783167301/story-2_glzovf.jpg",
-      "image_alt": "The family who built GROVEside standing in the courtyard",
+      "image_alt": "The family who built CelestialEve standing in the courtyard",
       "image_position": "left",
-      "body": "Over the last decade, we rebuilt the grove brick by brick with our own hands. We were architects, builders, designers and dreamers all at once. It became a true family adventure – our kids grew up here, lending their help along the way – and slowly the grove transformed into what it is today: GROVEside."
+      "body": "Over the last decade, we rebuilt the grove brick by brick with our own hands. We were architects, builders, designers and dreamers all at once. It became a true family adventure – our kids grew up here, lending their help along the way – and slowly the grove transformed into what it is today: CelestialEve."
     },
     {
       "slug": "discovering-a-new-way",
       "heading": "Discovering a New Way of Living",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783168509/story-3_qgbtyl.jpg",
-      "image_alt": "A horse at GROVEside representing nature and grove life",
+      "image_alt": "A horse at CelestialEve representing nature and grove life",
       "image_position": "right",
       "body": "For me personally, raised in a city apartment and always travelling for work, grove life was something completely new. Having animals around, fields outside our windows and nature at our doorstep changed everything. I realised many other professionals, like me, rarely have the chance to experience this."
     },
     {
       "slug": "groveside-today",
-      "heading": "GROVEside Today",
+      "heading": "CelestialEve Today",
       "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783168613/story-4_vvcrpm.jpg",
-      "image_alt": "GROVEside property today – the completed retreat",
+      "image_alt": "CelestialEve property today – the completed retreat",
       "image_position": "left",
-      "body": "GROVEside is now open to welcome business professionals seeking a different kind of stay. A place where productivity meets peace, where meetings become meaningful, and where every detail has been crafted with care. We are proud to share what we built with you."
+      "body": "CelestialEve is now open to welcome business professionals seeking a different kind of stay. A place where productivity meets peace, where meetings become meaningful, and where every detail has been crafted with care. We are proud to share what we built with you."
     }
   ],
   "founder_note": {
     "show": true,
     "heading": "A note from the founder",
-    "member_ref": "andra-delanoye",
+    "member_ref": "Jonan Smith",
     "closing_salutation": "Warm regards,"
   }
 }

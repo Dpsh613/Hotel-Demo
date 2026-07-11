@@ -1,0 +1,63 @@
+{
+  "section_heading": "What Our Guests Say",
+  "section_subheading": "Authentic experiences from people who've stayed, worked, and connected here.",
+  "layout_variant": "cards",
+  "testimonials": [
+    {
+      "slug": "sophie-v",
+      "quote": "CelestialEve is unlike any place we've used for a team offsite. The space feels alive, unhurried, and genuinely creative. We left with more ideas than we could handle.",
+      "author_name": "Sophie Vandermeersch",
+      "author_title": "Head of People, Volta",
+      "author_image_ref": null,
+      "author_image_alt": "",
+      "rating": 5,
+      "source_platform": "Google",
+      "source_url": null,
+      "date": "2025-03-14",
+      "featured": true,
+      "show": true
+    },
+    {
+      "slug": "thomas-l",
+      "quote": "Stayed two nights in the Coppice Room while finalising a proposal. Fast Wi-Fi, absolute quiet, excellent coffee. Came back three weeks later with a colleague.",
+      "author_name": "Thomas Leclercq",
+      "author_title": "Independent Consultant",
+      "author_image_ref": null,
+      "author_image_alt": "",
+      "rating": 5,
+      "source_platform": "Booking.com",
+      "source_url": null,
+      "date": "2025-04-02",
+      "featured": true,
+      "show": true
+    },
+    {
+      "slug": "anna-k",
+      "quote": "We hosted our annual strategy day in Bowie's Boardroom. The catering was perfectly timed, the room layout exactly as requested, and our team left energised.",
+      "author_name": "Anna Kessler",
+      "author_title": "Marketing Director, Kessler Partners",
+      "author_image_ref": null,
+      "author_image_alt": "",
+      "rating": 5,
+      "source_platform": "LinkedIn",
+      "source_url": null,
+      "date": "2025-02-20",
+      "featured": false,
+      "show": true
+    },
+    {
+      "slug": "cathie-v",
+      "quote": "CelestialEve is unlike any place we've used for a team offsite. The space feels alive, unhurried, and genuinely creative. We left with more ideas than we could handle.",
+      "author_name": "Sophie Vandermeersch",
+      "author_title": "Head of People, Volta",
+      "author_image_ref": null,
+      "author_image_alt": "",
+      "rating": 5,
+      "source_platform": "Google",
+      "source_url": null,
+      "date": "2025-03-14",
+      "featured": true,
+      "show": true
+    }
+  ]
+}

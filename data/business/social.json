@@ -3,7 +3,7 @@
     {
       "platform": "facebook",
       "display_name": "Facebook",
-      "url": "https://facebook.com",
+      "url": "https://m.me/100017664734303",
       "show_in_header": true,
       "show_in_footer": true,
       "show_in_contact": true
@@ -11,7 +11,15 @@
     {
       "platform": "instagram",
       "display_name": "Instagram",
-      "url": "https://instagram.com",
+      "url": "https://ig.me/m/_ds_7420",
+      "show_in_header": true,
+      "show_in_footer": true,
+      "show_in_contact": true
+    },
+    {
+      "platform": "whatsapp",
+      "display_name": "WhatsApp",
+      "url": "https://wa.me/7982523488",
       "show_in_header": true,
       "show_in_footer": true,
       "show_in_contact": true

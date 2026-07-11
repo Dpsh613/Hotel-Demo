@@ -1,0 +1,44 @@
+{
+  "section_heading": "Frequently Asked Questions",
+  "intro_text": "Find answers to common questions about reservations, private events, dietary accommodations, and our dining experience.",
+  "display_style": "accordion",
+  "faq_groups": [
+    {
+      "slug": "reservations",
+      "heading": "Reservations & Dining",
+      "items": [
+        {
+          "question": "What is your cancellation policy for reservations?",
+          "answer": "We request that any cancellations or modifications to your reservation be made at least **24 hours in advance**. For large parties or special events, please refer to your confirmation email for specific policies or contact our [support team](/contact).",
+          "sort_order": 1
+        },
+        {
+          "question": "Do you accommodate dietary restrictions and food allergies?",
+          "answer": "Yes, we accommodate all major dietary requirements, including gluten-free, vegan, and nut-free diets. Please note your request when booking or inform your server. You can view our full allergen guide on our [menus page](/menu).",
+          "sort_order": 2
+        },
+        {
+          "question": "Is there a dress code at the restaurant?",
+          "answer": "We recommend a **smart casual** dress code. We ask that guests refrain from wearing swimwear or athletic attire in the main dining room.",
+          "sort_order": 3
+        }
+      ]
+    },
+    {
+      "slug": "events",
+      "heading": "Events & Catering",
+      "items": [
+        {
+          "question": "Can I host a private event or large group dinner?",
+          "answer": "Absolutely. We offer tailored packages for private events, corporate functions, and family gatherings. Please visit our [private events page](/spaces) to explore our spaces and submit an inquiry form.",
+          "sort_order": 1
+        },
+        {
+          "question": "Do you provide off-site catering services?",
+          "answer": "We offer full-service catering for off-site events. Our team handles everything from custom menu design to professional service staffing. Contact us at events@restaurant.local for details.",
+          "sort_order": 2
+        }
+      ]
+    }
+  ]
+}

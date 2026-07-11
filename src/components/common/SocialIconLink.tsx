@@ -15,7 +15,7 @@ interface SocialIconLinkProps {
 }
 
 // Inline SVGs for brand icons (Lucide removed brand icons in v0.3+)
-const FacebookIcon = ({ className }: { className?: string }) => (
+export const FacebookIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const FacebookIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const InstagramIcon = ({ className }: { className?: string }) => (
+export const InstagramIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const LinkedinIcon = ({ className }: { className?: string }) => (
+export const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const TwitterIcon = ({ className }: { className?: string }) => (
+export const TwitterIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ const TwitterIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const YoutubeIcon = ({ className }: { className?: string }) => (
+export const YoutubeIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -95,6 +95,22 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Added WhatsApp Icon matching the exact style constraints
+export const WhatsappIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
+
 const PLATFORM_ICONS: Record<
   string,
   React.ComponentType<{ className?: string }>
@@ -104,6 +120,7 @@ const PLATFORM_ICONS: Record<
   linkedin: LinkedinIcon,
   twitter: TwitterIcon,
   youtube: YoutubeIcon,
+  whatsapp: WhatsappIcon, // Added to the map
 };
 
 const SIZE_CLASSES = {
@@ -121,9 +138,7 @@ export function SocialIconLink({
   className,
   variant = "opacity",
 }: SocialIconLinkProps) {
-  // Support legacy display_name prop for backward compatibility
   const label = displayName || display_name || platform;
-
   const Icon = PLATFORM_ICONS[platform.toLowerCase()] ?? ExternalLink;
   const iconClass = cn(SIZE_CLASSES[size], "text-current");
 

@@ -16,6 +16,8 @@ import {
   RoomData,
   ServiceData,
   ValuesData,
+  Testimonial,
+  TestimonialsData,
   SiteConfig,
   FeaturesConfig,
   NavigationConfig,
@@ -27,6 +29,7 @@ import {
   StoryPageData,
   PracticalInfoBlock,
   ContactPageData,
+  FAQData,
 } from "@/types"; // imported interface/ shape of object.
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -255,6 +258,42 @@ export const getValuesData = cache(async (): Promise<ValuesData> => {
   return readJson<ValuesData>(
     path.join(DATA_DIR, "components", "values.json"),
     {} as ValuesData,
+  );
+});
+
+export const getAllTestimonials = cache(
+  async (): Promise<{ testimonials: Testimonial[] }> => {
+    return readJson<{ testimonials: Testimonial[] }>(
+      path.join(DATA_DIR, "components", "testimonials.json"),
+      { testimonials: [] },
+    );
+  },
+);
+
+export const getTestimonialsData = cache(
+  async (): Promise<TestimonialsData | null> => {
+    const data = await readJson<
+      TestimonialsData & { testimonials: Testimonial[] }
+    >(path.join(DATA_DIR, "components", "testimonials.json"), {
+      section_heading: "What our guests say",
+      testimonials: [],
+    } as unknown as TestimonialsData & { testimonials: Testimonial[] });
+    return data || null;
+  },
+);
+
+export const getFeaturedTestimonials = cache(
+  async (): Promise<Testimonial[]> => {
+    const data = await getAllTestimonials();
+    if (!data || !data.testimonials) return [];
+    return data.testimonials.filter((t) => t.featured && t.show);
+  },
+);
+
+export const getFAQData = cache(async (): Promise<FAQData> => {
+  return readJson<FAQData>(
+    path.join(DATA_DIR, "components", "faq.json"),
+    {} as FAQData,
   );
 });
 

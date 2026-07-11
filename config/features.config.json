@@ -1,11 +1,14 @@
 {
-  "testimonials_section": false,
-  "faq_section": false,
-  "newsletter_signup": true,
-  "pre_header_bar": false,
-  "announcement_banner": false,
+  "hero_slideshow": true,
+  "hero_single_image": false,
   "quick_navigation": true,
   "gallery_lightbox": true,
-  "pricing_visible": true,
-  "hero_slideshow": true
+  "newsletter_signup": true,
+  "testimonials_section": true,
+  "faq_section": true,
+  "floating_contact_widget": true,
+  "blog": false,
+  "pre_header_bar": false,
+  "announcement_banner": false,
+  "pricing_visible": true
 }

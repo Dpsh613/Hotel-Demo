@@ -1,7 +1,7 @@
 {
   "page_title": "Practical Information",
-  "meta_title": "Practical Info | GROVEside",
-  "meta_description": "Find practical information about visiting GROVEside.",
+  "meta_title": "Practical Info | CelestialEve",
+  "meta_description": "Find practical information about visiting CelestialEve.",
   "hero_cta_ref": "primary-contact",
   "info_blocks": [
     {
@@ -16,22 +16,12 @@
       "content_type": "distance-table",
       "content": [
         {
-          "label": "Brussels Airport",
+          "label": "Great St. Church",
           "distance_km": 25,
           "distance_text": "25 km"
         },
         {
-          "label": "Brussels City Center",
-          "distance_km": 20,
-          "distance_text": "20 km"
-        },
-        {
-          "label": "Antwerp",
-          "distance_km": 30,
-          "distance_text": "30 km"
-        },
-        {
-          "label": "Mechelen",
+          "label": "Main City Center",
           "distance_km": 20,
           "distance_text": "20 km"
         }
@@ -55,7 +45,7 @@
         "Super-Fast Wi-Fi",
         "Power Outlets"
       ],
-      "note": "We intentionally do not support video conferencing. GROVEside is designed to foster genuine, in-person interaction in a focused and inspiring environment."
+      "note": "We intentionally do not support video conferencing. CelestialEve is designed to foster genuine, in-person interaction in a focused and inspiring environment."
     },
     {
       "slug": "amenities",
@@ -66,13 +56,12 @@
         "Natural Daylight",
         "Inspiring Views",
         "Outdoor Terrace",
-        "The Summer House",
-        "Grove Animals"
+        "The Summer House"
       ]
     }
   ],
   "services_quicklinks": {
     "heading": "Our Services",
-    "intro": "Quick access to everything we offer for an exceptional GROVEside experience."
+    "intro": "Quick access to everything we offer for an exceptional CelestialEve experience."
   }
 }

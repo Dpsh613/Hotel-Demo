@@ -3,21 +3,36 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { PreFooterCTA } from "@/components/sections/PreFooterCTA";
-import { getFeaturesConfig } from "@/lib/data/loaders";
+import {
+  getFeaturesConfig,
+  getFAQData,
+  getBusinessContact,
+  getSocialPlatforms,
+} from "@/lib/data/loaders";
 import { GsapReveal } from "@/components/animation/GsapReveal";
 import { ConditionalPreFooter } from "@/components/layout/ConditionalPreFooter";
+
+// 👇 THIS IS THE ONLY LINE THAT CHANGED 👇
+import { FloatingContactWidget } from "@/components/interactive/floating-contact/FloatingContactWidget";
 
 export default async function SiteLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const features = await getFeaturesConfig();
+  // Fetch data in parallel for speed
+  const [features, faqData, contactData, socialData] = await Promise.all([
+    getFeaturesConfig(),
+    getFAQData(),
+    getBusinessContact(),
+    getSocialPlatforms(),
+  ]);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col relative">
       <PreHeaderBar />
       <SiteHeader />
+
       <main id="content" className="flex-1" tabIndex={-1}>
         {children}
       </main>
@@ -40,6 +55,15 @@ export default async function SiteLayout({
           </div>
         </div>
       </div>
+
+      {/* --- INJECT THE WIDGET HERE --- */}
+      {features?.floating_contact_widget && (
+        <FloatingContactWidget
+          faqData={faqData}
+          contact={contactData}
+          social={socialData}
+        />
+      )}
     </div>
   );
 }

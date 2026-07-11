@@ -2,26 +2,26 @@
   "feature_groups": [
     {
       "slug": "why-choose",
-      "heading": "Why choose The Golden Crown",
+      "heading": "Why choose CelestialEve",
       "display_layout": "icon-grid",
       "items": [
         {
-          "slug": "freedom",
+          "slug": "home-away",
           "icon_ref": "",
-          "label": "Freedom to Tailor Your Stay",
-          "body": "From extended business trips to corporate retreats and seminars, The Golden Crown offers the flexibility to match your needs. Enjoy the freedom to work, stay and unwind on your terms – in an exclusive, personalised setting."
+          "label": "A Home Away from Home",
+          "body": "Enjoy thoughtfully designed accommodations that combine modern comfort with a warm, welcoming atmosphere, making every stay relaxing and memorable."
         },
         {
-          "slug": "eco-friendly",
+          "slug": "nature",
           "icon_ref": "",
-          "label": "Eco-Friendly and Sustainable",
-          "body": "Our thoughtfully rebuilt grove reflects a deep commitment to the environment, using sustainable materials and technologies to create a space that respects nature while offering modern comfort."
+          "label": "Peaceful Natural Surroundings",
+          "body": "Escape the noise of everyday life and unwind in beautiful green surroundings where fresh air, open spaces and nature create the perfect setting for relaxation."
         },
         {
           "slug": "convenient",
           "icon_ref": "",
           "label": "Convenient and Connected",
-          "body": "Located in Demoville, The Golden Crown is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
+          "body": "Located in Demoville, CelestialEve is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
         },
         {
           "slug": "one-price",
@@ -30,22 +30,28 @@
           "body": "We keep it simple: our One-Price Concept ensures simple, transparent pricing with no hidden costs. Inclusions are clearly detailed per service, so you always know what to expect."
         },
         {
-          "slug": "nature",
+          "slug": "celebrations",
           "icon_ref": "",
-          "label": "Nature-Infused Experience",
-          "body": "Step away from the noise! The Golden Crown offers an intimate, peaceful setting with open field views and the calming presence of animals – a pony, a dog, cats, chickens and rabbits — roaming freely around the property. Whether you are taking a break, strolling the grounds or unwinding after a long day, their presence adds a unique and relaxing touch to your stay."
+          "label": "Perfect for Every Celebration",
+          "body": "From weddings and birthdays to anniversaries and family reunions, our versatile spaces provide the ideal backdrop for life's most special moments."
         },
         {
-          "slug": "professionals",
+          "slug": "comfort",
           "icon_ref": "",
-          "label": "Equipped for Professionals",
-          "body": "The Golden Crown is designed with professionals in mind. From high-end meeting spaces to private rooms and wellness facilities (fitness and sauna), every detail supports productivity, focus, collaboration and comfort – whether you are working, hosting an event, collaborating with a team or simply recharging after a busy day."
+          "label": "Comfort Meets Convenience",
+          "body": "Relax in cozy accommodations with thoughtfully selected amenities that help you enjoy a comfortable, stress-free stay."
         },
         {
-          "slug": "multilingual",
+          "slug": "memories",
           "icon_ref": "",
-          "label": "Multilingual Team",
-          "body": "To ensure smooth communication and a personalised experience, our team speaks English, Dutch, French, German and Romanian. No matter your language, we are here to help."
+          "label": "Moments You'll Remember",
+          "body": "Whether you're here to celebrate, reconnect or simply unwind, every experience at CelestialEve is designed to create lasting memories."
+        },
+        {
+          "slug": "group-stays",
+          "icon_ref": "",
+          "label": "Ideal for Groups",
+          "body": "Whether you're planning a family vacation, friends' getaway or corporate retreat, CelestialEve offers comfortable spaces designed to bring everyone together."
         }
       ]
     },
@@ -53,7 +59,7 @@
       "slug": "technologies",
       "heading": "Technologies",
       "display_layout": "icon-grid",
-      "note": "We intentionally do not support video conferencing. The Golden Crown is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
+      "note": "We intentionally do not support video conferencing. CelestialEve is designed to foster genuine, in-person interaction in a focused and inspiring environment.",
       "items": [
         {
           "slug": "smart-tv",
@@ -96,7 +102,7 @@
     {
       "slug": "amenities",
       "heading": "Amenities",
-      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at The Golden Crown.",
+      "intro": "Each detail is designed to enhance your experience, ensuring comfort, productivity and inspiration throughout your time at CelestialEve.",
       "display_layout": "photo-card-grid",
       "items": [
         {
@@ -139,7 +145,7 @@
     {
       "slug": "room-inclusions",
       "heading": "What's Included",
-      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at The Golden Crown features:",
+      "intro": "Our One-Price concept means everything you need is included, with no surprises at checkout. Every stay at CelestialEve features:",
       "display_layout": "inclusion-grid",
       "items": [
         {

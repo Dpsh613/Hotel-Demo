@@ -45,6 +45,47 @@ export interface ValuesData {
   section_subheading?: string;
 }
 
+export interface Testimonial {
+  slug: string;
+  quote: string;
+  author_name: string;
+  author_title?: string;
+  author_image_ref?: string;
+  author_image_alt?: string;
+  rating?: number;
+  source_platform?: string;
+  source_url?: string;
+  date: string;
+  featured: boolean;
+  show: boolean;
+}
+
+export interface TestimonialsData {
+  testimonials: Testimonial[];
+  section_heading: string;
+  section_subheading?: string;
+  layout_variant?: "cards" | "quotes" | "masonry" | "carousel";
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+  sort_order: number;
+}
+
+export interface FAQGroup {
+  slug: string;
+  heading: string;
+  items: FAQItem[];
+}
+
+export interface FAQData {
+  faq_groups: FAQGroup[];
+  section_heading: string;
+  intro_text?: string;
+  display_style?: "accordion" | "open-list" | "tabbed";
+}
+
 export interface NewsletterData {
   section_label: any;
   heading: string;

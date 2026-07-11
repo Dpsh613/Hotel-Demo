@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
-import { ContactPageData, ContactFormField } from "@/types";
+import { ContactPageData } from "@/types";
 
 // Import Upstash and Resend
 import { Redis } from "@upstash/redis";
@@ -29,7 +29,6 @@ const emailRateLimit = new Ratelimit({
 });
 
 // Basic Security Limits
-const MAX_STRING_LENGTH = 1000; // Prevents OOM (Memory) crashes
 const ALLOWED_FILE_TYPES = ["image/jpeg", "image/png", "application/pdf"]; // Prevents malicious scripts
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
