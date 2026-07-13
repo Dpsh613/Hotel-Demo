@@ -13,14 +13,34 @@
       "text_position": "bottom-left",
       "slideshow_images": [
         {
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279464/hero-01_cqc7mp.png",
-          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279708/hero-01_h7zbxe.png",
-          "alt_text": "CelestialEve exterior/interior 1"
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841726/exterior-1_wfm8tp.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843166/exterior-1_ucoogc.jpg",
+          "alt_text": "CelestialEve exterior 1"
         },
         {
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279582/hero-02_rswvmh.png",
-          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1782279764/hero-02_peamp7.png",
-          "alt_text": "CelestialEve exterior/interior 2"
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841765/exterior-2_bw9y0q.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843213/exterior-2_bmatdz.jpg",
+          "alt_text": "CelestialEve exterior 2"
+        },
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841671/exterior-3_l9jkm0.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843182/exterior-3_ooeaxm.jpg",
+          "alt_text": "CelestialEve exterior 3"
+        },
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841659/interior-1_mmwqjz.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843182/interior-1_unyfjd.jpg",
+          "alt_text": "CelestialEve interior 1"
+        },
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841726/interior-2_j39au7.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843166/interior-2_y2h10i.jpg",
+          "alt_text": "CelestialEve interior 2"
+        },
+        {
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783841760/interior-3_ay7qux.jpg",
+          "mobile_image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783843176/interior-3_b4ifzw.jpg",
+          "alt_text": "CelestialEve interior 3"
         }
       ]
     }

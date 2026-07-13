@@ -59,6 +59,7 @@ export interface HomePageData {
     intro_text?: string;
     layout_variant?: string;
   };
+  discover_section?: Record<string, unknown>;
   features_section?: Record<string, unknown>;
   values_section?: Record<string, unknown>;
   cta_section_ref?: string;

@@ -1,5 +1,5 @@
 import { cache } from "react"; // cache so it wont load on every request.
-import { promises as fs, read } from "fs"; // file system which is built in node - it can read/create/write and delete file.
+import { promises as fs } from "fs"; // file system which is built in node - it can read/create/write and delete file.
 import path from "path"; // built in which reads/creates path thats better than "data/components/hero.json" as it could break.
 import {
   BusinessIdentity,
@@ -30,6 +30,7 @@ import {
   PracticalInfoBlock,
   ContactPageData,
   FAQData,
+  DiscoverSection,
 } from "@/types"; // imported interface/ shape of object.
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -237,6 +238,18 @@ export const getCTABySlug = cache(
     );
     if (!data || !data.ctas) return null;
     return data.ctas.find((c) => c.slug === slug) || null;
+  },
+);
+
+//discover section -
+export const getDiscoverSection = cache(
+  async (slug: string): Promise<DiscoverSection | null> => {
+    const data = await readJson<{ discover_sections: DiscoverSection[] }>(
+      path.join(DATA_DIR, "components", "discover.json"),
+      { discover_sections: [] },
+    );
+    if (!data || !data.discover_sections) return null;
+    return data.discover_sections.find((d) => d.slug === slug) ?? null;
   },
 );
 

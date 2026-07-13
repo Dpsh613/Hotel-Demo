@@ -1,0 +1,107 @@
+{
+  "discover_sections": [
+    {
+      "slug": "discover-sections",
+      "eyebrow": "Discover CelestialEve",
+      "heading": "Everything you need for a perfect stay",
+      "intro": "From comfortable stays and delicious dining to unforgettable celebrations and fun experiences, CelestialEve has everything to make your time truly special.",
+      "layout": "alternating",
+      "items": [
+        {
+          "slug": "stay-your-way",
+          "title": "Stay Your Way",
+          "description": "Thoughtfully designed rooms, suites and cottages that blend modern comfort with a warm, homely feel.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917102/stay-your-way_pkelqr.jpg",
+            "alt": "Comfortable guest room at CelestialEve"
+          },
+          "iconRef": "bed",
+          "cta": {
+            "label": "Explore Accommodation",
+            "href": "/stay"
+          },
+          "featured": true,
+          "badge": "Most Popular",
+          "sortOrder": 1
+        },
+        {
+          "slug": "celebrate-together",
+          "title": "Celebrate Together",
+          "description": "Host weddings, birthdays, anniversaries, family reunions and corporate events in beautiful indoor and outdoor spaces.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917044/celebrate-together_xwtovh.jpg",
+            "alt": "Wedding celebration at CelestialEve"
+          },
+          "iconRef": "party",
+          "cta": {
+            "label": "Explore Events",
+            "href": "/events"
+          },
+          "sortOrder": 2
+        },
+        {
+          "slug": "dine-delight",
+          "title": "Dine & Delight",
+          "description": "Savor freshly prepared meals, seasonal flavors and memorable dining experiences shared with family and friends.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917059/dine-delight_ixizu0.jpg",
+            "alt": "Restaurant dining at CelestialEve"
+          },
+          "iconRef": "restaurant",
+          "cta": {
+            "label": "Explore Dining",
+            "href": "/dining"
+          },
+          "sortOrder": 3
+        },
+        {
+          "slug": "experience-explore",
+          "title": "Experience & Explore",
+          "description": "Spend your days swimming, horse riding, cycling, enjoying bonfire evenings, nature walks and countless outdoor activities.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917091/experience-explore_epftel.jpg",
+            "alt": "Outdoor activities at CelestialEve"
+          },
+          "iconRef": "tree",
+          "cta": {
+            "label": "Explore Experiences",
+            "href": "/experiences"
+          },
+          "featured": true,
+          "badge": "Guest Favourite",
+          "sortOrder": 4
+        },
+        {
+          "slug": "moments-celestialeve",
+          "title": "Moments at CelestialEve",
+          "description": "Browse beautiful spaces, joyful celebrations and unforgettable memories shared by our guests.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917102/moments-celestialeve_v1hm4g.jpg",
+            "alt": "Gallery of CelestialEve"
+          },
+          "iconRef": "camera",
+          "cta": {
+            "label": "View Gallery",
+            "href": "/gallery"
+          },
+          "sortOrder": 5
+        },
+        {
+          "slug": "amenities-comfort",
+          "title": "Amenities & Comfort",
+          "description": "From modern facilities to thoughtful touches, everything you need for a seamless and relaxing stay.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917102/amenities-comfort_okuwan.jpg",
+            "alt": "Amenities and lounge area"
+          },
+          "iconRef": "sparkles",
+          "cta": {
+            "label": "Discover Amenities",
+            "href": "/amenities"
+          },
+          "sortOrder": 6
+        }
+      ]
+    }
+  ]
+}

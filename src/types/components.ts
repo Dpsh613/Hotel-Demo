@@ -12,6 +12,36 @@ export interface CTABlock {
   show_divider_above?: boolean;
 }
 
+// discover component
+
+export interface DiscoverItem {
+  slug: string;
+  title: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  iconRef?: string;
+  cta?: {
+    label: string;
+    href: string;
+  };
+  featured?: boolean; // for large card layouts
+  badge?: string; // Optional: "Most Popular", "New"
+  sortOrder: number;
+}
+
+export interface DiscoverSection {
+  slug: string;
+  heading?: string;
+  eyebrow?: string; // Discover CelestialEve
+  subheading?: string;
+  intro?: string;
+  layout?: "grid" | "masonry" | "alternating" | "carousel";
+  items: DiscoverItem[];
+}
+
 export interface FeatureItem {
   slug: string;
   icon_ref?: string;

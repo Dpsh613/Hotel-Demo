@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import { HeroSlideshow } from "@/components/sections/HeroSlideshow";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { DiscoverSection } from "@/components/sections/DiscoverSection";
 import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
 import { ValuesGrid } from "@/components/sections/ValuesGrid";
-// 1. Import the new TestimonialsCarousel component (adjust path if needed)
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { GsapReveal } from "@/components/animation/GsapReveal";
@@ -14,7 +13,7 @@ import {
   getHomePageData,
   getFeatureGroup,
   getValuesData,
-  // 2. Use getTestimonialsData instead of getAllTestimonials so you get the section headings
+  getDiscoverSection,
   getTestimonialsData,
 } from "@/lib/data/loaders";
 import { buildMetadata } from "@/lib/seo";
@@ -35,12 +34,14 @@ export default async function Page() {
   const homeData = await getHomePageData();
   const featuresData = await getFeatureGroup("why-choose");
   const valuesData = await getValuesData();
-  // 3. Fetch the full testimonial data object
+
+  // FIXED: Changed from "discover-sections" to "discover-section" to correctly match JSON
+  const discoverData = await getDiscoverSection("discover-sections");
+
   const testimonialsData = await getTestimonialsData();
 
   if (!heroData || !homeData) return null;
 
-  // Optional: Filter testimonials to only include ones where `show` is true
   const activeTestimonials =
     testimonialsData?.testimonials?.filter((t) => t.show) || [];
 
@@ -52,9 +53,11 @@ export default async function Page() {
         <AboutSection data={homeData.about_section} />
       </GsapReveal>
 
-      <GsapReveal direction="up" distance={40} delay={0.1}>
-        <ServicesGrid data={homeData.services_section} />
-      </GsapReveal>
+      {discoverData && (
+        <GsapReveal direction="up" distance={40} delay={0.1}>
+          <DiscoverSection data={discoverData} />
+        </GsapReveal>
+      )}
 
       {featuresData && (
         <GsapReveal direction="up" distance={40} delay={0.1}>
@@ -62,7 +65,6 @@ export default async function Page() {
         </GsapReveal>
       )}
 
-      {/* 4. Testimonials placed just above Values */}
       {testimonialsData && activeTestimonials.length > 0 && (
         <GsapReveal direction="up" distance={40} delay={0.1}>
           <TestimonialsCarousel

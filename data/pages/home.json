@@ -25,5 +25,14 @@
     },
     "intro_text": "From peaceful weekend escapes and family vacations to weddings, celebrations and corporate events, CelestialEve offers versatile spaces designed to bring people together. Enjoy comfortable stays, beautiful surroundings and warm hospitality that make every visit memorable.",
     "layout_variant": "grid-3"
+  },
+  "discover_section": {
+    "show_section": true,
+    "heading": {
+      "eyebrow": "Discover CelestialEve",
+      "title": "Everything you need for a perfect stay",
+      "subtitle": "From comfortable stays and delicious dinings to unforgettable celebration and fun Experiences, CelestialEve has everything to make your time truly special."
+    },
+    "layout_variant": "grid-2"
   }
 }
