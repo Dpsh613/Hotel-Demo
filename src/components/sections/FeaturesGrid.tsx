@@ -56,7 +56,7 @@ export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
         <div className="bg-[#FFFFFF] container-content p-6 md:p-8 lg:p-12">
           <SectionReveal className="text-left mb-8 md:mb-12">
             <h2 className="text-[28px] md:text-[36px] text-[#111] font-display font-semibold">
-              {featureGroup.heading || "Why choose The Golden Crown?"}
+              {featureGroup.heading}
             </h2>
           </SectionReveal>
 

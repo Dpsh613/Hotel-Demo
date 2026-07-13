@@ -40,21 +40,6 @@
           "sortOrder": 2
         },
         {
-          "slug": "dine-delight",
-          "title": "Dine & Delight",
-          "description": "Savor freshly prepared meals, seasonal flavors and memorable dining experiences shared with family and friends.",
-          "image": {
-            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917059/dine-delight_ixizu0.jpg",
-            "alt": "Restaurant dining at CelestialEve"
-          },
-          "iconRef": "restaurant",
-          "cta": {
-            "label": "Explore Dining",
-            "href": "/dining"
-          },
-          "sortOrder": 3
-        },
-        {
           "slug": "experience-explore",
           "title": "Experience & Explore",
           "description": "Spend your days swimming, horse riding, cycling, enjoying bonfire evenings, nature walks and countless outdoor activities.",
@@ -69,22 +54,22 @@
           },
           "featured": true,
           "badge": "Guest Favourite",
-          "sortOrder": 4
+          "sortOrder": 3
         },
         {
-          "slug": "moments-celestialeve",
-          "title": "Moments at CelestialEve",
-          "description": "Browse beautiful spaces, joyful celebrations and unforgettable memories shared by our guests.",
+          "slug": "dine-delight",
+          "title": "Dine & Delight",
+          "description": "Savor freshly prepared meals, seasonal flavors and memorable dining experiences shared with family and friends.",
           "image": {
-            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917102/moments-celestialeve_v1hm4g.jpg",
-            "alt": "Gallery of CelestialEve"
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917059/dine-delight_ixizu0.jpg",
+            "alt": "Restaurant dining at CelestialEve"
           },
-          "iconRef": "camera",
+          "iconRef": "restaurant",
           "cta": {
-            "label": "View Gallery",
-            "href": "/gallery"
+            "label": "Explore Dining",
+            "href": "/dining"
           },
-          "sortOrder": 5
+          "sortOrder": 4
         },
         {
           "slug": "amenities-comfort",
@@ -98,6 +83,21 @@
           "cta": {
             "label": "Discover Amenities",
             "href": "/amenities"
+          },
+          "sortOrder": 5
+        },
+        {
+          "slug": "moments-celestialeve",
+          "title": "Moments at CelestialEve",
+          "description": "Browse beautiful spaces, joyful celebrations and unforgettable memories shared by our guests.",
+          "image": {
+            "src": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1783917102/moments-celestialeve_v1hm4g.jpg",
+            "alt": "Gallery of CelestialEve"
+          },
+          "iconRef": "camera",
+          "cta": {
+            "label": "View Gallery",
+            "href": "/gallery"
           },
           "sortOrder": 6
         }

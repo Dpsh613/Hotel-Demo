@@ -2,6 +2,7 @@ import { DiscoverHeader } from "./discover/DiscoverHeader";
 import { DiscoverFooterCTA } from "./discover/DiscoverFooterCTA";
 import { DiscoverCard } from "../cards/DiscoverCard";
 import type { DiscoverSection as DiscoverSectionType } from "@/types/components";
+import { SectionReveal } from "../animation/SectionReveal";
 
 interface DiscoverSectionProps {
   data?: DiscoverSectionType | null;
@@ -19,22 +20,24 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
   const rightColumnItems = mappedItems.filter((_, i) => i % 2 !== 0);
 
   return (
-    <section className="bg-[#F6F4F0]pb-12 md:pb-[30px] overflow-hidden">
-      {/* 1. RESTRICTED WIDTH CONTAINER FOR LARGER MARGINS */}
+    <section className="bg-[#F6F4F0]  py-12 md:py-[80px] overflow-hidden">
       <div className="w-[92%] max-w-[1150px] mx-auto">
-        <DiscoverHeader
-          eyebrow={data.eyebrow}
-          heading={data.heading}
-          intro={data.intro}
-        />
+        <SectionReveal>
+          <DiscoverHeader
+            eyebrow={data.eyebrow}
+            heading={data.heading}
+            intro={data.intro}
+          />
+        </SectionReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-4">
-          {/* LEFT COLUMN (Landscape Cards) */}
-          <div className="lg:col-span-7 flex flex-col gap-3 lg:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+          {/* LEFT COLUMN (Landscape Cards - Wider but shorter) */}
+          <div className="lg:col-span-7 flex flex-col gap-4 lg:gap-6">
             {leftColumnItems.map(({ item, originalIndex }) => (
               <div
                 key={item.slug}
-                className="w-full h-[300px] md:h-[320px] flex"
+                // Reduced height here so they look like panoramic landscape cards
+                className="w-full flex h-[240px] md:h-[260px] lg:h-[280px]"
               >
                 <DiscoverCard
                   item={item}
@@ -45,13 +48,14 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
             ))}
           </div>
 
-          {/* RIGHT COLUMN (Square Cards) */}
-          {/* Using a slightly smaller height creates the staggered masonry effect */}
-          <div className="lg:col-span-5 flex flex-col gap-2 lg:gap-4">
+          {/* RIGHT COLUMN (Square Cards - Narrower but taller to stagger) */}
+          <div className="lg:col-span-5 flex flex-col gap-4 lg:gap-6 mt-6 lg:mt-0">
             {rightColumnItems.map(({ item, originalIndex }) => (
               <div
                 key={item.slug}
-                className="w-full min-h-[260px] md:h-[280px] flex"
+                // Increased height here. Because this is taller than the left card,
+                // it perfectly pushes the next rows out of alignment, creating the stagger!
+                className="w-full flex h-auto md:h-[280px] lg:h-[300px]"
               >
                 <DiscoverCard
                   item={item}
@@ -62,8 +66,9 @@ export function DiscoverSection({ data }: DiscoverSectionProps) {
             ))}
           </div>
         </div>
-
-        <DiscoverFooterCTA />
+        <SectionReveal>
+          <DiscoverFooterCTA />
+        </SectionReveal>
       </div>
     </section>
   );
