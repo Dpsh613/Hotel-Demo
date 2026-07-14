@@ -3,17 +3,20 @@
     {
       "slug": "why-choose",
       "heading": "Why choose CelestialEve",
+      "intro": "More Than a Stay, It's an Experience",
       "display_layout": "icon-grid",
       "items": [
         {
           "slug": "home",
           "icon_ref": "home",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "A Home Away from Home",
           "body": "Enjoy thoughtfully designed accommodations that combine modern comfort with a warm, welcoming atmosphere, making every stay relaxing and memorable."
         },
         {
           "slug": "nature",
           "icon_ref": "nature",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "Peaceful Natural Surroundings",
           "body": "Escape the noise of everyday life and unwind in beautiful green surroundings where fresh air, open spaces and nature create the perfect setting for relaxation."
         },
@@ -21,37 +24,73 @@
           "slug": "convenient",
           "icon_ref": "convenient",
           "label": "Convenient and Connected",
-          "body": "Located in Demoville, CelestialEve is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "body": "Located in Demoville, CelestialEve is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km) and Mechelen (20km). Experience peace & privacy with easy access to where business happens."
         },
         {
           "slug": "one-price",
-          "icon_ref": "",
+          "icon_ref": "one-price",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "One-Price Concept",
           "body": "We keep it simple: our One-Price Concept ensures simple, transparent pricing with no hidden costs. Inclusions are clearly detailed per service, so you always know what to expect."
         },
         {
           "slug": "celebrations",
-          "icon_ref": "",
+          "icon_ref": "celebrations",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "Perfect for Every Celebration",
           "body": "From weddings and birthdays to anniversaries and family reunions, our versatile spaces provide the ideal backdrop for life's most special moments."
         },
         {
           "slug": "comfort",
-          "icon_ref": "",
+          "icon_ref": "comfort",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "Comfort Meets Convenience",
           "body": "Relax in cozy accommodations with thoughtfully selected amenities that help you enjoy a comfortable, stress-free stay."
         },
         {
           "slug": "memories",
-          "icon_ref": "",
+          "icon_ref": "memories",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "Moments You'll Remember",
           "body": "Whether you're here to celebrate, reconnect or simply unwind, every experience at CelestialEve is designed to create lasting memories."
         },
         {
           "slug": "group-stays",
-          "icon_ref": "",
+          "icon_ref": "group-stays",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
           "label": "Ideal for Groups",
           "body": "Whether you're planning a family vacation, friends' getaway or corporate retreat, CelestialEve offers comfortable spaces designed to bring everyone together."
+        }
+      ],
+      "quote": {
+        "quote": "what we love most is creating a place where guest feel cared for, connected and completely at ease.",
+        "author": "The CelestialEve Team"
+      },
+      "stats": [
+        {
+          "slug": "years",
+          "value": "5+",
+          "label": "Years of Hospitality",
+          "sort_order": 1
+        },
+        {
+          "slug": "guests",
+          "value": "1000+",
+          "label": "Happy Guests",
+          "sort_order": 2
+        },
+        {
+          "slug": "cities",
+          "value": "4",
+          "label": "Major Cities Within Easy Reach",
+          "sort_order": 3
+        },
+        {
+          "slug": "rating",
+          "value": "4.8/5",
+          "label": "Guest Rating",
+          "sort_order": 4
         }
       ]
     },

@@ -41,14 +41,32 @@ export interface DiscoverSection {
   layout?: "grid" | "masonry" | "alternating" | "carousel";
   items: DiscoverItem[];
 }
+// feature
 
 export interface FeatureItem {
   slug: string;
   icon_ref?: string;
+  image_ref?: string;
   label: string;
   descriptor?: string;
   body?: string;
   sort_order: number;
+}
+
+export interface FeatureStat {
+  slug: string;
+  icon_ref?: string;
+  value: string; // 5+ years, "1000+visits", "4.8/5"
+  label: string; // years of hospitality
+  body?: string;
+  sort_order: number;
+}
+
+export interface FeatureQuote {
+  quote: string;
+  author: string;
+  role?: string;
+  icon_ref?: string;
 }
 
 export interface FeatureGroup {
@@ -58,6 +76,8 @@ export interface FeatureGroup {
   note?: string;
   display_layout?: "icon-grid" | "icon-list" | "card-grid" | "photo-card-grid";
   items: FeatureItem[];
+  quote?: FeatureQuote;
+  stats?: FeatureStat[];
 }
 
 export interface ValueItem {

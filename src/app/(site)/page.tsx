@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { HeroSlideshow } from "@/components/sections/HeroSlideshow";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { DiscoverSection } from "@/components/sections/DiscoverSection";
-import { FeaturesGrid } from "@/components/sections/FeaturesGrid";
+import { FeatureSection } from "@/components/sections/FeatureSection";
 import { ValuesGrid } from "@/components/sections/ValuesGrid";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -61,7 +61,7 @@ export default async function Page() {
 
       {featuresData && (
         <GsapReveal direction="up" distance={40} delay={0.1}>
-          <FeaturesGrid featureGroup={featuresData} />
+          <FeatureSection featureGroup={featuresData} />
         </GsapReveal>
       )}
 
