@@ -6,20 +6,20 @@
       "display_layout": "icon-grid",
       "items": [
         {
-          "slug": "home-away",
-          "icon_ref": "",
+          "slug": "home",
+          "icon_ref": "home",
           "label": "A Home Away from Home",
           "body": "Enjoy thoughtfully designed accommodations that combine modern comfort with a warm, welcoming atmosphere, making every stay relaxing and memorable."
         },
         {
           "slug": "nature",
-          "icon_ref": "",
+          "icon_ref": "nature",
           "label": "Peaceful Natural Surroundings",
           "body": "Escape the noise of everyday life and unwind in beautiful green surroundings where fresh air, open spaces and nature create the perfect setting for relaxation."
         },
         {
           "slug": "convenient",
-          "icon_ref": "",
+          "icon_ref": "convenient",
           "label": "Convenient and Connected",
           "body": "Located in Demoville, CelestialEve is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km), Antwerp (30km) and Mechelen (20km). Experience peace and privacy with easy access to where business happens."
         },

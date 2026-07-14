@@ -40,7 +40,7 @@ export async function SiteFooter() {
           {/* Left Column */}
           <div className="max-w-[260px] text-center md:text-left flex flex-col items-center md:items-start">
             <p className="text-[20px] lg:text-[16px] font-semibold text-white mb-2">
-              {identity.legal_entity_name || "GROVEside La Mama BV"}
+              {identity.legal_entity_name}
             </p>
 
             <p className="text-[18px] lg:text-[14px] leading-[1.8] text-white/85">
@@ -48,21 +48,21 @@ export async function SiteFooter() {
             </p>
 
             <p className="text-[18px] lg:text-[14px] leading-[1.8] text-white/85 mb-6">
-              VAT: {identity.vat_number || "BE 0742576075"}
+              VAT: {identity.vat_number}
             </p>
 
             <a
               href={`mailto:${contact.email}`}
               className="block text-[18px] lg:text-[14px] leading-[1.8] text-white/85 hover:text-white transition-colors"
             >
-              {contact.email || "info@example.com"}
+              {contact.email}
             </a>
 
             <a
-              href={contact.phone_uri || "tel:+15551234567"}
+              href={contact.phone_uri}
               className="block text-[18px] lg:text-[14px] leading-[1.8] text-white/85 hover:text-white transition-colors"
             >
-              T: {contact.phone || "+1 (0) 555 123 4567"}
+              T: {contact.phone}
             </a>
 
             {socialPlatforms.length > 0 && (

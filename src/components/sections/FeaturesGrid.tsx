@@ -17,6 +17,9 @@ import {
   Sun,
   Eye,
   Home,
+  SparklesIcon,
+  CameraIcon,
+  GroupIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { SectionReveal } from "@/components/animation/SectionReveal";
@@ -28,11 +31,16 @@ interface FeaturesGridProps {
 }
 
 const iconMap: Record<string, React.ElementType> = {
+  home: Home,
   freedom: Sliders,
   "eco-friendly": Leaf,
   convenient: MapPin,
+  celebrations: SparklesIcon,
   "one-price": Tag,
+  comfort: Leaf,
+  memories: CameraIcon,
   nature: Trees,
+  "group-stays": GroupIcon,
   professionals: Briefcase,
   multilingual: Globe,
   Monitor: Monitor,
@@ -44,8 +52,6 @@ const iconMap: Record<string, React.ElementType> = {
   Coffee: Coffee,
   Sun: Sun,
   Eye: Eye,
-  Trees: Trees,
-  Home: Home,
 };
 
 export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
@@ -67,7 +73,7 @@ export function FeaturesGrid({ featureGroup, variant }: FeaturesGridProps) {
                 <SectionReveal key={item.slug} delay={index * 0.1}>
                   <div className="border-t-2 border-[#111]/30 pt-4">
                     <div className="flex items-center gap-2 mb-3">
-                      <Icon className="text-[#111] size-5" />
+                      <Icon className="text-[#C46D52] size-5" />
                       <h3 className="text-[16px] font-normal text-[#111]">
                         {item.label}
                       </h3>

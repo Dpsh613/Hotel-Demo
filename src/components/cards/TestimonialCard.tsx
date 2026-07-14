@@ -101,7 +101,7 @@ export function TestimonialCard({
 
         {/* Source platform badge */}
         {sourcePlatform && (
-          <span className="ml-auto text-xs text-text-secondary shrink-0">
+          <span className="ml-auto text-xs text-[#C46D52] shrink-0">
             {sourcePlatform}
           </span>
         )}

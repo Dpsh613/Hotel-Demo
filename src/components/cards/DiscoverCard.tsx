@@ -53,25 +53,25 @@ const cardStyles = [
   {
     bg: "bg-[#282B21]",
     text: "text-white",
-    iconBg: "bg-[#3D4233]",
-    iconColor: "text-[#C5A97A]",
+    iconBg: "bg-[#C46D52]",
+    iconColor: "text-white",
     ctaStyle: "link-text",
-    ctaColor: "text-[#C5A97A] hover:text-white",
+    ctaColor: "text-[#C46D52] hover:text-white",
   },
   {
     bg: "bg-transparent",
     text: "text-white",
     iconBg: "bg-[#324559]/80",
     iconColor: "text-white",
-    ctaStyle: "button-outline",
+    ctaStyle: "button-solid",
   },
   {
     bg: "bg-[#F7F5F2]",
     text: "text-[#111111]",
-    iconBg: "bg-[#A59C90]",
+    iconBg: "bg-[#C46D52]",
     iconColor: "text-white",
     ctaStyle: "link-text",
-    ctaColor: "text-[#8A8175] hover:text-[#111]",
+    ctaColor: "text-[#C46D52] hover:text-[#111]",
   },
 ] as const;
 
@@ -121,17 +121,6 @@ export function DiscoverCard({
                 <Link
                   href={item.cta.href as Route}
                   className="inline-flex items-center gap-2 bg-white text-[#111] rounded-[4px] py-2 px-4 transition-transform duration-[2s] ease-out hover:scale-105 w-fit"
-                >
-                  <span className="text-[15px] tracking-[0.1em] font-bold uppercase">
-                    {item.cta.label}
-                  </span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              )}
-              {theme.ctaStyle === "button-outline" && (
-                <Link
-                  href={item.cta.href as Route}
-                  className="inline-flex items-center gap-2 border border-white/30 text-white rounded-[4px] py-2 px-4 transition-transform duration-[2s] ease-out hover:scale-105 w-fit"
                 >
                   <span className="text-[15px] tracking-[0.1em] font-bold uppercase">
                     {item.cta.label}
