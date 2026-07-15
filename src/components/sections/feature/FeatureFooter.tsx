@@ -25,12 +25,12 @@ export function FeatureFooter({ quote, stats }: FeatureFooterProps) {
       {/* LEFT: Quote Section */}
       {quote && (
         <div className="w-full lg:w-[40%] flex gap-4 pr-0 lg:pr-6 lg:border-r border-[#E0DDD8]/60">
-          <Quote className="w-8 h-8 text-[#A18866]/40 shrink-0 fill-current rotate-180" />
+          <Quote className="w-8 h-8 text-[#C46D52] shrink-0 fill-current rotate-180" />
           <div className="flex flex-col justify-center">
-            <p className="italic text-[#444] text-[14px] leading-relaxed mb-3">
+            <p className="italic text-[#] text-[14px] leading-relaxed mb-3">
               "{quote.quote}"
             </p>
-            <span className="text-[11px] uppercase tracking-widest text-[#888] font-semibold">
+            <span className="text-[11px] uppercase tracking-widest text-[#C46D52] font-semibold">
               — {quote.author}
             </span>
           </div>
@@ -47,13 +47,13 @@ export function FeatureFooter({ quote, stats }: FeatureFooterProps) {
                 key={stat.slug}
                 className={`flex flex-col items-center text-center ${index !== sortedStats.length - 1 ? "md:border-r md:border-[#E0DDD8]/60" : ""}`}
               >
-                <div className="flex items-center justify-center gap-2 mb-2 text-[#A18866]">
-                  <Icon className="w-4 h-4" strokeWidth={1.5} />
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <Icon className="w-4 h-4 text-[#C46D52]" strokeWidth={1.5} />
                   <span className="font-display text-[24px] text-[#111] leading-none">
                     {stat.value}
                   </span>
                 </div>
-                <span className="text-[14px] text-[#666] leading-[1.4] max-w-[120px]">
+                <span className="text-[14px] text-[#111] leading-[1.4] max-w-[120px]">
                   {stat.label}
                 </span>
               </div>

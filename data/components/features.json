@@ -9,56 +9,56 @@
         {
           "slug": "home",
           "icon_ref": "home",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784094701/home_nqom6i.jpg",
           "label": "A Home Away from Home",
           "body": "Enjoy thoughtfully designed accommodations that combine modern comfort with a warm, welcoming atmosphere, making every stay relaxing and memorable."
         },
         {
           "slug": "nature",
           "icon_ref": "nature",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
-          "label": "Peaceful Natural Surroundings",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784095094/nature_avhjhe.jpg",
+          "label": "Natural Surroundings",
           "body": "Escape the noise of everyday life and unwind in beautiful green surroundings where fresh air, open spaces and nature create the perfect setting for relaxation."
         },
         {
           "slug": "convenient",
           "icon_ref": "convenient",
           "label": "Convenient and Connected",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
-          "body": "Located in Demoville, CelestialEve is perfectly positioned near major business hubs – Brussels Airport (25km), Brussels City Center (20km) and Mechelen (20km). Experience peace & privacy with easy access to where business happens."
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784095003/convenient_ksgzgi.jpg",
+          "body": "Experience peace and convenience at CelestialEve, Ideally located with 4 major cities just within a 30km radius"
         },
         {
           "slug": "one-price",
           "icon_ref": "one-price",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784094989/one-price_bw3xkh.jpg",
           "label": "One-Price Concept",
           "body": "We keep it simple: our One-Price Concept ensures simple, transparent pricing with no hidden costs. Inclusions are clearly detailed per service, so you always know what to expect."
         },
         {
           "slug": "celebrations",
           "icon_ref": "celebrations",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
-          "label": "Perfect for Every Celebration",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784094880/celebrations_haiqzs.jpg",
+          "label": "Your Celebration Destination",
           "body": "From weddings and birthdays to anniversaries and family reunions, our versatile spaces provide the ideal backdrop for life's most special moments."
         },
         {
           "slug": "comfort",
           "icon_ref": "comfort",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784095243/comfort_kbkonz.jpg",
           "label": "Comfort Meets Convenience",
           "body": "Relax in cozy accommodations with thoughtfully selected amenities that help you enjoy a comfortable, stress-free stay."
         },
         {
           "slug": "memories",
           "icon_ref": "memories",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784094875/memories_x8m2em.jpg",
           "label": "Moments You'll Remember",
           "body": "Whether you're here to celebrate, reconnect or simply unwind, every experience at CelestialEve is designed to create lasting memories."
         },
         {
           "slug": "group-stays",
           "icon_ref": "group-stays",
-          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784014069/comfort_iouruj.jpg",
+          "image_ref": "https://res.cloudinary.com/dsbslj3nb/image/upload/v1784094720/group-stays_plej6w.jpg",
           "label": "Ideal for Groups",
           "body": "Whether you're planning a family vacation, friends' getaway or corporate retreat, CelestialEve offers comfortable spaces designed to bring everyone together."
         }

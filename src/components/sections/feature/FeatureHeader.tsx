@@ -31,12 +31,6 @@ export function FeatureHeader({ heading, intro, note }: FeatureHeaderProps) {
             {intro}
           </h2>
         )}
-
-        {/* Paragraph / Note */}
-        <p className="text-[14px] md:text-[15px]  font-lighttext-[#111] max-w-2xl mx-auto leading-relaxed">
-          {note ||
-            "At CelestialEve, every detail is thoughtfully curated to offer you comfort, connection and unforgettable memories."}
-        </p>
       </div>
     </SectionReveal>
   );

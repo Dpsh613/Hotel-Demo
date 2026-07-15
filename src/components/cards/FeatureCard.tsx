@@ -30,7 +30,7 @@ export function FeatureCard({ item }: FeatureCardProps) {
   const Icon = (item.icon_ref ? IconMap[item.icon_ref] : null) ?? Home;
 
   return (
-    <article className="bg-[#FCFBFA] rounded-[12px] overflow-hidden border border-[#E0DDD8]/60 flex flex-col h-full shadow-sm group transition-shadow hover:shadow-md">
+    <article className="bg-[#FCFBFA] overflow-hidden border border-[#E0DDD8]/60 flex flex-col h-full shadow-sm group transition-shadow hover:shadow-md">
       {/* Text Content Area */}
       <div className="p-6 flex-grow flex flex-col">
         {/* Top: Icon + Title */}
@@ -38,7 +38,7 @@ export function FeatureCard({ item }: FeatureCardProps) {
           <div className="w-9 h-9 rounded-md bg-[#F4F1ED] flex items-center justify-center shrink-0">
             <Icon className="w-4 h-4 text-[#C46D52]" strokeWidth={2} />
           </div>
-          <h3 className="font-serif text-[24px] text-[#111] font-medium pt-1">
+          <h3 className="font-serif text-[20px] text-[#111] font-medium">
             {item.label}
           </h3>
         </div>
