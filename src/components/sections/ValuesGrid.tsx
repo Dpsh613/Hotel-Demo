@@ -13,10 +13,10 @@ export function ValuesGrid({ data }: ValuesGridProps) {
     <section className="bg-[#F0EDE8] py-6 md:py-[30px]">
       <div className="container-content">
         <SectionReveal className="text-center md:text-left mb-5">
-          <p className="text-[20px] md:text-[20px] tracking-[0.18em] uppercase text-[#111] mb-2 font-semibold">
+          <p className=" text-[20px] md:text-[20px] tracking-[0.18em] uppercase text-[#111] mb-2 font-semibold">
             OUR VALUES
           </p>
-          <h2 className="font-display text-[28px] md:text-[36px] text-[#111] font-semibold">
+          <h2 className=" font-display text-[28px] md:text-[36px] text-[#111] font-semibold">
             What drive us at our core
           </h2>
         </SectionReveal>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+
 import {
   Users,
   Table,
@@ -15,6 +16,7 @@ import {
   getFeatureGroup,
   getFeaturesConfig,
 } from "@/lib/data/loaders";
+
 import { EventGalleryCarousel } from "@/components/interactive/EventGalleryCarousel";
 import { AccordionInfoCard } from "@/components/interactive/AccordionInfoCard";
 import { SectionReveal } from "@/components/animation/SectionReveal";

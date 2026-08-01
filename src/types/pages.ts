@@ -251,3 +251,4 @@ export interface EventsPageData {
     alt_text: string;
   }[];
 }
+// updated data for stay page
